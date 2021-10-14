@@ -4,13 +4,20 @@
 
 ## 请求列表
 
-|   请求名称    | 请求方法 |    请求返回key    |          功能          |    参数     |
-| :-----------: | :------: | :---------------: | :--------------------: | :---------: |
-|  BlockNumber  |   GET    |   block_number    |    查询当前区块高度    |             |
-|   NodePeers   |   GET    |    node_peers     |    查询P2P节点信息     |             |
-|  SyncStatus   |   GET    |    sync_status    | 查询群组内同步状态信息 |             |
-| BlockByNumber |   POST   | block_information | 根据区块号查询区块信息 | BlockNumber |
-|  TotTxCount   |   GET    |   tot_trans_cnt   |    查询当前总交易数    |             |
+|   请求名称    | 请求方法 |    请求返回key    |               功能               |                      参数                      |
+| :-----------: | :------: | :---------------: | :------------------------------: | :--------------------------------------------: |
+|  BlockNumber  |   GET    |   block_number    |         查询当前区块高度         |                                                |
+|   NodePeers   |   GET    |    node_peers     |         查询P2P节点信息          |                                                |
+|  SyncStatus   |   GET    |    sync_status    |      查询群组内同步状态信息      |                                                |
+| BlockByNumber |   POST   | block_information |      根据区块号查询区块信息      |                  BlockNumber                   |
+|  TotTxCount   |   GET    |   tot_trans_cnt   |         查询当前总交易数         |                                                |
+|   DeployRes   |   GET    |                   |           部署资源合约           |                                                |
+|   GetResAll   |   GET    |                   | 返会全部资源list，一个struct数组 |                                                |
+|    AddRes     |   POST   |                   |             增加资源             | OwnerID<br>ServiceType<br>ServiceTime<br>Price |
+|    GetRes     |   POST   |                   |      根据资源ID查询资源信息      |                     ResID                      |
+|   PreBuyRes   |   POST   |                   |               预购               |                ResID<br>ButerID                |
+|     ApRes     |   POST   |                   |            提供接入码            |              ResID<br>AccessCode               |
+|   FinalRes    |   POST   |                   |           结束服务记录           |                     ResID                      |
 
 
 
