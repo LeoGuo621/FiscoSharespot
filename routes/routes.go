@@ -3,12 +3,19 @@ package routes
 import (
 	"context"
 	"encoding/json"
+<<<<<<< HEAD
+=======
+	"fiscoSharespot/respool"
+>>>>>>> 49ffd75 (ResPool Contract Finished)
 	"fiscoSharespot/utils"
 	"fmt"
 	"github.com/FISCO-BCOS/go-sdk/client"
 	"github.com/FISCO-BCOS/go-sdk/conf"
+	"github.com/FISCO-BCOS/go-sdk/core/types"
+	"github.com/ethereum/go-ethereum/common"
 	"github.com/gin-gonic/gin"
 	"log"
+	"math/big"
 	"net/http"
 	"strconv"
 )
@@ -183,6 +190,7 @@ func TotalTransactionCount(c *gin.Context) {
 	mapResp["tot_trans_cnt"] = jtottscnt
 	resp.Data = mapResp
 }
+<<<<<<< HEAD
 //
 //// BlockbyHash POST /blockbyhash
 //func BlockbyHash(c *gin.Context) {
@@ -207,4 +215,210 @@ func TotalTransactionCount(c *gin.Context) {
 //	mapResp["block_information"] = jblockbyhash
 //	resp.Data = mapResp
 //}
+=======
+
+var Resaddress common.Address
+var RescontractTX *types.Transaction
+var Resinstance *res_pool.ResPool
+var respoolSession *res_pool.ResPoolSession
+
+//curl http://localhost:8080/DeployRes
+func DeployResContract(c *gin.Context){
+	resp := utils.Resp{
+		Recode: utils.RecodeOk,
+	}
+	defer ResponseData(c, &resp)
+	//部署合约
+	Resaddress, RescontractTX, Resinstance, err := res_pool.DeployResPool(conn.GetTransactOpts(), conn)
+	if err != nil {
+		fmt.Println("DeployResPool failed")
+		resp.Recode = utils.RecodeFiscoErr
+	}
+
+	respoolSession = &res_pool.ResPoolSession{
+		Contract:     Resinstance,
+		CallOpts:     *conn.GetCallOpts(),
+		TransactOpts: *conn.GetTransactOpts(),
+	}
+
+	resources , err := respoolSession.GetAllRes()
+	fmt.Println("Resources len:" , len(resources))
+	if err != nil{
+		fmt.Println("Get Resources Failed!")
+		resp.Recode = utils.RecodeFiscoErr
+	}
+
+	mapResp := make(map[string]interface{})
+	mapResp["contract_address"] = Resaddress.Hex()
+	mapResp["tx_hash"] = RescontractTX.Hash().Hex()
+	mapResp["now_length"] = len(resources)
+	resp.Data = mapResp
+}
+//curl http://localhost:8080/AddRes -X POST -d "OwnerID=jyh" -d "ServiceType=Wifi" -d "ServiceTime=100" -d "Price=10"
+func AddRes(c *gin.Context)  {
+	//初次调试，链上未部署合约，所以此方法先部署了合约，并获取了instance，后期需要把部署合约的功能写在init函数中
+	resp := utils.Resp{
+		Recode: utils.RecodeOk,
+	}
+	defer ResponseData(c, &resp)
+	//部署合约
+	id := c.PostForm("OwnerID")
+	sertype := c.PostForm("ServiceType")
+	sertime := c.PostForm("ServiceTime")
+	serprice := c.PostForm("Price")
+
+	_sertime , _ := new(big.Int).SetString(sertime,10)
+
+	_price , _ := new(big.Int).SetString(serprice, 10)
+
+	tx, receipt, err := respoolSession.AddRes(id, sertype, _sertime, _price)
+	if err != nil{
+		log.Fatal(err)
+	}
+
+	fmt.Printf("tx sent: %s\n", tx.Hash().Hex())
+	fmt.Printf("transaction hash of receipt: %s\n", receipt.GetTransactionHash())
+
+	resources , err := respoolSession.GetAllRes()
+	fmt.Println("Resources len:" , len(resources))
+	if err != nil{
+		fmt.Println("Get Resources Failed!")
+		resp.Recode = utils.RecodeFiscoErr
+	}
+	for i := 0; i < len(resources); i++ {
+		fmt.Printf("%+v", resources)
+	}
+	resp.Data = resources[len(resources)-1]
+}
+
+func PreBuyRes(c *gin.Context)  {
+	resp := utils.Resp{
+		Recode: utils.RecodeOk,
+	}
+	defer ResponseData(c, &resp)
+
+	resid := c.PostForm("ResID")
+	id := c.PostForm("BuyerID")
+
+	tx, receipt, err := respoolSession.PreBuyRes(resid, id)
+	if err != nil{
+		log.Fatal(err)
+	}
+
+	fmt.Printf("tx sent: %s\n", tx.Hash().Hex())
+	fmt.Printf("transaction hash of receipt: %s\n", receipt.GetTransactionHash())
+
+	resources , err := respoolSession.GetRes(resid)
+
+	if err != nil{
+		fmt.Println("Get Resources Failed!")
+		resp.Recode = utils.RecodeFiscoErr
+	}
+
+	fmt.Printf("%+v", resources)
+
+	resp.Data = resources
+}
+
+func ApRes(c *gin.Context)  {
+	resp := utils.Resp{
+		Recode: utils.RecodeOk,
+	}
+	defer ResponseData(c, &resp)
+
+	resid := c.PostForm("ResID")
+	acode := c.PostForm("AccessCode")
+
+	tx, receipt, err := respoolSession.ApRes(resid, acode)
+	if err != nil{
+		log.Fatal(err)
+	}
+
+	fmt.Printf("tx sent: %s\n", tx.Hash().Hex())
+	fmt.Printf("transaction hash of receipt: %s\n", receipt.GetTransactionHash())
+
+	resources , err := respoolSession.GetRes(resid)
+
+	if err != nil{
+		fmt.Println("Get Resources Failed!")
+		resp.Recode = utils.RecodeFiscoErr
+	}
+
+	fmt.Printf("%+v", resources)
+
+	resp.Data = resources
+}
+
+func FinalRes(c *gin.Context)  {
+	resp := utils.Resp{
+		Recode: utils.RecodeOk,
+	}
+	defer ResponseData(c, &resp)
+
+	resid := c.PostForm("ResID")
+
+	tx, receipt, err := respoolSession.FinalRes(resid)
+	if err != nil{
+		log.Fatal(err)
+	}
+
+	fmt.Printf("tx sent: %s\n", tx.Hash().Hex())
+	fmt.Printf("transaction hash of receipt: %s\n", receipt.GetTransactionHash())
+
+	resources , err := respoolSession.GetRes(resid)
+
+	if err != nil{
+		fmt.Println("Get Resources Failed!")
+		resp.Recode = utils.RecodeFiscoErr
+	}
+
+	fmt.Printf("%+v", resources)
+
+	resp.Data = resources
+}
+//curl http://localhost:8080/GetRes -X POST -d "ResID=xxxxx"
+func GetRes(c *gin.Context)  {
+	//初次调试，链上未部署合约，所以此方法先部署了合约，并获取了instance，后期需要把部署合约的功能写在init函数中
+	resp := utils.Resp{
+		Recode: utils.RecodeOk,
+	}
+	defer ResponseData(c, &resp)
+
+	resid := c.PostForm("ResID")
+
+	resources , err := respoolSession.GetRes(resid)
+
+	if err != nil{
+		fmt.Println("Get Resources Failed!")
+		resp.Recode = utils.RecodeFiscoErr
+	}
+
+	fmt.Printf("%+v", resources)
+
+	resp.Data = resources
+}
+
+
+func GetResAll(c *gin.Context)  {
+	//初次调试，链上未部署合约，所以此方法先部署了合约，并获取了instance，后期需要把部署合约的功能写在init函数中
+	resp := utils.Resp{
+		Recode: utils.RecodeOk,
+	}
+	defer ResponseData(c, &resp)
+
+	resources , err := respoolSession.GetAllRes()
+	fmt.Println("Resources len:" , len(resources))
+	if err != nil{
+		fmt.Println("Get Resources Failed!")
+		resp.Recode = utils.RecodeFiscoErr
+	}
+
+	for i := 0; i < len(resources); i++ {
+		fmt.Printf("%+v", resources)
+	}
+
+	resp.Data = resources
+}
+
+>>>>>>> 49ffd75 (ResPool Contract Finished)
 
