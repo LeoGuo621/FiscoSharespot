@@ -5,12 +5,16 @@ import (
 	"fmt"
 	"github.com/gin-gonic/gin"
 )
-
+/*
+	./solc-0.4.25 --bin --abi -o ./store ./store/Store.sol
+	./abigen --bin ./store/Store.bin --abi ./store/Store.abi --pkg store --type Store --out ./store/Store.go
+*/
 func main(){
 	engine := gin.Default()
 	engine.GET("/ping", routes.PingHandler)
 	engine.GET("/blockNumber", routes.BlockNumber)
-
+	engine.POST("/blockByNumber", routes.BlockByNumber)
+	engine.POST("/users", routes.AddUser)
 	if err := engine.Run(":8080"); err != nil {
 		fmt.Printf("Server failed to start, err: %v", err)
 	}
