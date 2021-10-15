@@ -229,10 +229,7 @@ struct ltchars {
 #include <linux/input.h>
 #include <linux/kexec.h>
 #include <linux/keyctl.h>
-<<<<<<< HEAD
-=======
 #include <linux/landlock.h>
->>>>>>> grw_branch
 #include <linux/loop.h>
 #include <linux/lwtunnel.h>
 #include <linux/magic.h>
@@ -501,18 +498,11 @@ ccflags="$@"
 		$2 ~ /^O?XTABS$/ ||
 		$2 ~ /^TC[IO](ON|OFF)$/ ||
 		$2 ~ /^IN_/ ||
-<<<<<<< HEAD
-		$2 ~ /^LOCK_(SH|EX|NB|UN)$/ ||
-		$2 ~ /^LO_(KEY|NAME)_SIZE$/ ||
-		$2 ~ /^LOOP_(CLR|CTL|GET|SET)_/ ||
-		$2 ~ /^(AF|SOCK|SO|SOL|IPPROTO|IP|IPV6|TCP|MCAST|EVFILT|NOTE|SHUT|PROT|MAP|MFD|T?PACKET|MSG|SCM|MCL|DT|MADV|PR|LOCAL)_/ ||
-=======
 		$2 ~ /^LANDLOCK_/ ||
 		$2 ~ /^LOCK_(SH|EX|NB|UN)$/ ||
 		$2 ~ /^LO_(KEY|NAME)_SIZE$/ ||
 		$2 ~ /^LOOP_(CLR|CTL|GET|SET)_/ ||
 		$2 ~ /^(AF|SOCK|SO|SOL|IPPROTO|IP|IPV6|TCP|MCAST|EVFILT|NOTE|SHUT|PROT|MAP|MFD|T?PACKET|MSG|SCM|MCL|DT|MADV|PR|LOCAL|TCPOPT)_/ ||
->>>>>>> grw_branch
 		$2 ~ /^NFC_(GENL|PROTO|COMM|RF|SE|DIRECTION|LLCP|SOCKPROTO)_/ ||
 		$2 ~ /^NFC_.*_(MAX)?SIZE$/ ||
 		$2 ~ /^RAW_PAYLOAD_/ ||

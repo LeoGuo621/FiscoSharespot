@@ -13,14 +13,10 @@
 package unix
 
 import (
-<<<<<<< HEAD
-	"runtime"
-=======
 	"fmt"
 	"os"
 	"runtime"
 	"sync"
->>>>>>> grw_branch
 	"syscall"
 	"unsafe"
 )
@@ -751,8 +747,6 @@ func Mmap(fd int, offset int64, length int, prot int, flags int) (data []byte, e
 func Munmap(b []byte) (err error) {
 	return mapper.Munmap(b)
 }
-<<<<<<< HEAD
-=======
 
 // Event Ports
 
@@ -990,4 +984,3 @@ func (e *EventPort) Get(s []PortEvent, min int, timeout *Timespec) (int, error) 
 	}
 	return int(got), err
 }
->>>>>>> grw_branch

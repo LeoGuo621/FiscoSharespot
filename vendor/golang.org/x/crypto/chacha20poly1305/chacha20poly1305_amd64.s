@@ -4,10 +4,7 @@
 
 // This file was originally from https://golang.org/cl/24717 by Vlad Krasnov of CloudFlare.
 
-<<<<<<< HEAD
-=======
 //go:build gc && !purego
->>>>>>> grw_branch
 // +build gc,!purego
 
 #include "textflag.h"

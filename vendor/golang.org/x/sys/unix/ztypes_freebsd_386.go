@@ -31,11 +31,8 @@ type Timeval struct {
 	Usec int32
 }
 
-<<<<<<< HEAD
-=======
 type Time_t int32
 
->>>>>>> grw_branch
 type Rusage struct {
 	Utime    Timeval
 	Stime    Timeval

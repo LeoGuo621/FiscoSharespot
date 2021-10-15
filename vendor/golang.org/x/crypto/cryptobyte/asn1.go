@@ -117,8 +117,6 @@ func (b *Builder) AddASN1GeneralizedTime(t time.Time) {
 	})
 }
 
-<<<<<<< HEAD
-=======
 // AddASN1UTCTime appends a DER-encoded ASN.1 UTCTime.
 func (b *Builder) AddASN1UTCTime(t time.Time) {
 	b.AddASN1(asn1.UTCTime, func(c *Builder) {
@@ -132,7 +130,6 @@ func (b *Builder) AddASN1UTCTime(t time.Time) {
 	})
 }
 
->>>>>>> grw_branch
 // AddASN1BitString appends a DER-encoded ASN.1 BIT STRING. This does not
 // support BIT STRINGs that are not a whole number of bytes.
 func (b *Builder) AddASN1BitString(data []byte) {
@@ -482,8 +479,6 @@ func (s *String) ReadASN1GeneralizedTime(out *time.Time) bool {
 	return true
 }
 
-<<<<<<< HEAD
-=======
 const defaultUTCTimeFormatStr = "060102150405Z0700"
 
 // ReadASN1UTCTime decodes an ASN.1 UTCTime into out and advances.
@@ -523,7 +518,6 @@ func (s *String) ReadASN1UTCTime(out *time.Time) bool {
 	return true
 }
 
->>>>>>> grw_branch
 // ReadASN1BitString decodes an ASN.1 BIT STRING into out and advances.
 // It reports whether the read was successful.
 func (s *String) ReadASN1BitString(out *encoding_asn1.BitString) bool {

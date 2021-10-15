@@ -10,11 +10,8 @@ package curve25519 // import "golang.org/x/crypto/curve25519"
 import (
 	"crypto/subtle"
 	"fmt"
-<<<<<<< HEAD
-=======
 
 	"golang.org/x/crypto/curve25519/internal/field"
->>>>>>> grw_branch
 )
 
 // ScalarMult sets dst to the product scalar * point.
@@ -23,9 +20,6 @@ import (
 // zeroes, irrespective of the scalar. Instead, use the X25519 function, which
 // will return an error.
 func ScalarMult(dst, scalar, point *[32]byte) {
-<<<<<<< HEAD
-	scalarMult(dst, scalar, point)
-=======
 	var e [32]byte
 
 	copy(e[:], scalar[:])
@@ -75,7 +69,6 @@ func ScalarMult(dst, scalar, point *[32]byte) {
 	z2.Invert(&z2)
 	x2.Multiply(&x2, &z2)
 	copy(dst[:], x2.Bytes())
->>>>>>> grw_branch
 }
 
 // ScalarBaseMult sets dst to the product scalar * base where base is the

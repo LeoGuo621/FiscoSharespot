@@ -66,13 +66,10 @@ func Fchmodat(dirfd int, path string, mode uint32, flags int) (err error) {
 	return fchmodat(dirfd, path, mode)
 }
 
-<<<<<<< HEAD
-=======
 func InotifyInit() (fd int, err error) {
 	return InotifyInit1(0)
 }
 
->>>>>>> grw_branch
 //sys	ioctl(fd int, req uint, arg uintptr) (err error) = SYS_IOCTL
 //sys	ioctlPtr(fd int, req uint, arg unsafe.Pointer) (err error) = SYS_IOCTL
 
@@ -175,31 +172,7 @@ func Utimes(path string, tv []Timeval) error {
 //sys	utimensat(dirfd int, path string, times *[2]Timespec, flags int) (err error)
 
 func UtimesNano(path string, ts []Timespec) error {
-<<<<<<< HEAD
-	if ts == nil {
-		err := utimensat(AT_FDCWD, path, nil, 0)
-		if err != ENOSYS {
-			return err
-		}
-		return utimes(path, nil)
-	}
-	if len(ts) != 2 {
-		return EINVAL
-	}
-	err := utimensat(AT_FDCWD, path, (*[2]Timespec)(unsafe.Pointer(&ts[0])), 0)
-	if err != ENOSYS {
-		return err
-	}
-	// If the utimensat syscall isn't available (utimensat was added to Linux
-	// in 2.6.22, Released, 8 July 2007) then fall back to utimes
-	var tv [2]Timeval
-	for i := 0; i < 2; i++ {
-		tv[i] = NsecToTimeval(TimespecToNsec(ts[i]))
-	}
-	return utimes(path, (*[2]Timeval)(unsafe.Pointer(&tv[0])))
-=======
 	return UtimesNanoAt(AT_FDCWD, path, ts, 0)
->>>>>>> grw_branch
 }
 
 func UtimesNanoAt(dirfd int, path string, ts []Timespec, flags int) error {
@@ -1240,15 +1213,7 @@ func anyToSockaddr(fd int, rsa *RawSockaddrAny) (Sockaddr, error) {
 func Accept(fd int) (nfd int, sa Sockaddr, err error) {
 	var rsa RawSockaddrAny
 	var len _Socklen = SizeofSockaddrAny
-<<<<<<< HEAD
-	// Try accept4 first for Android, then try accept for kernel older than 2.6.28
 	nfd, err = accept4(fd, &rsa, &len, 0)
-	if err == ENOSYS {
-		nfd, err = accept(fd, &rsa, &len)
-	}
-=======
-	nfd, err = accept4(fd, &rsa, &len, 0)
->>>>>>> grw_branch
 	if err != nil {
 		return
 	}
@@ -1370,8 +1335,6 @@ func SetsockoptTpacketReq3(fd, level, opt int, tp *TpacketReq3) error {
 	return setsockopt(fd, level, opt, unsafe.Pointer(tp), unsafe.Sizeof(*tp))
 }
 
-<<<<<<< HEAD
-=======
 func SetsockoptTCPRepairOpt(fd, level, opt int, o []TCPRepairOpt) (err error) {
 	if len(o) == 0 {
 		return EINVAL
@@ -1379,7 +1342,6 @@ func SetsockoptTCPRepairOpt(fd, level, opt int, o []TCPRepairOpt) (err error) {
 	return setsockopt(fd, level, opt, unsafe.Pointer(&o[0]), uintptr(SizeofTCPRepairOpt*len(o)))
 }
 
->>>>>>> grw_branch
 // Keyctl Commands (http://man7.org/linux/man-pages/man2/keyctl.2.html)
 
 // KeyctlInt calls keyctl commands in which each argument is an int.
@@ -2326,12 +2288,9 @@ type RemoteIovec struct {
 //sys	ProcessVMReadv(pid int, localIov []Iovec, remoteIov []RemoteIovec, flags uint) (n int, err error) = SYS_PROCESS_VM_READV
 //sys	ProcessVMWritev(pid int, localIov []Iovec, remoteIov []RemoteIovec, flags uint) (n int, err error) = SYS_PROCESS_VM_WRITEV
 
-<<<<<<< HEAD
-=======
 //sys	PidfdOpen(pid int, flags int) (fd int, err error) = SYS_PIDFD_OPEN
 //sys	PidfdGetfd(pidfd int, targetfd int, flags int) (fd int, err error) = SYS_PIDFD_GETFD
 
->>>>>>> grw_branch
 /*
  * Unimplemented
  */

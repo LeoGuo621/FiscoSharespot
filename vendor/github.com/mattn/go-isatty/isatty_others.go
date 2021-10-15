@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-// +build appengine js nacl
-=======
 //go:build appengine || js || nacl || wasm
 // +build appengine js nacl wasm
->>>>>>> grw_branch
 
 package isatty
 

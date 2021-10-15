@@ -211,13 +211,6 @@ func (rsa *RawSockaddrNFCLLCP) SetServiceNameLen(length int) {
 	rsa.Service_name_len = uint64(length)
 }
 
-<<<<<<< HEAD
-func InotifyInit() (fd int, err error) {
-	return InotifyInit1(0)
-}
-
-=======
->>>>>>> grw_branch
 // dup2 exists because func Dup3 in syscall_linux.go references
 // it in an unreachable path. dup2 isn't available on arm64.
 func dup2(oldfd int, newfd int) error

@@ -7,24 +7,14 @@
 
 package unix
 
-<<<<<<< HEAD
-import "unsafe"
-=======
 import (
 	"bytes"
 	"unsafe"
 )
->>>>>>> grw_branch
 
 // Helpers for dealing with ifreq since it contains a union and thus requires a
 // lot of unsafe.Pointer casts to use properly.
 
-<<<<<<< HEAD
-// newIfreq creates an ifreq with the input network interface name after
-// validating the name does not exceed IFNAMSIZ-1 (trailing NULL required)
-// bytes.
-func newIfreq(name string) (*ifreq, error) {
-=======
 // An Ifreq is a type-safe wrapper around the raw ifreq struct. An Ifreq
 // contains an interface name and a union of arbitrary data which can be
 // accessed using the Ifreq's methods. To create an Ifreq, use the NewIfreq
@@ -40,7 +30,6 @@ type Ifreq struct{ raw ifreq }
 // validating the name does not exceed IFNAMSIZ-1 (trailing NULL required)
 // bytes.
 func NewIfreq(name string) (*Ifreq, error) {
->>>>>>> grw_branch
 	// Leave room for terminating NULL byte.
 	if len(name) >= IFNAMSIZ {
 		return nil, EINVAL
@@ -49,17 +38,6 @@ func NewIfreq(name string) (*Ifreq, error) {
 	var ifr ifreq
 	copy(ifr.Ifrn[:], name)
 
-<<<<<<< HEAD
-	return &ifr, nil
-}
-
-// An ifreqData is an ifreq but with a typed unsafe.Pointer field for data in
-// the union. This is required in order to comply with the unsafe.Pointer rules
-// since the "pointer-ness" of data would not be preserved if it were cast into
-// the byte array of a raw ifreq.
-type ifreqData struct {
-	name [IFNAMSIZ]byte
-=======
 	return &Ifreq{raw: ifr}, nil
 }
 
@@ -156,25 +134,16 @@ type ifreqData struct {
 	// A type separate from ifreq is required in order to comply with the
 	// unsafe.Pointer rules since the "pointer-ness" of data would not be
 	// preserved if it were cast into the byte array of a raw ifreq.
->>>>>>> grw_branch
 	data unsafe.Pointer
 	// Pad to the same size as ifreq.
 	_ [len(ifreq{}.Ifru) - SizeofPtr]byte
 }
 
-<<<<<<< HEAD
-// SetData produces an ifreqData with the pointer p set for ioctls which require
-// arbitrary pointer data.
-func (ifr ifreq) SetData(p unsafe.Pointer) ifreqData {
-	return ifreqData{
-		name: ifr.Ifrn,
-=======
 // withData produces an ifreqData with the pointer p set for ioctls which require
 // arbitrary pointer data.
 func (ifr Ifreq) withData(p unsafe.Pointer) ifreqData {
 	return ifreqData{
 		name: ifr.raw.Ifrn,
->>>>>>> grw_branch
 		data: p,
 	}
 }

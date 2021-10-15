@@ -231,11 +231,8 @@ const (
 	BPF_PSEUDO_FUNC                             = 0x4
 	BPF_PSEUDO_KFUNC_CALL                       = 0x2
 	BPF_PSEUDO_MAP_FD                           = 0x1
-<<<<<<< HEAD
-=======
 	BPF_PSEUDO_MAP_IDX                          = 0x5
 	BPF_PSEUDO_MAP_IDX_VALUE                    = 0x6
->>>>>>> grw_branch
 	BPF_PSEUDO_MAP_VALUE                        = 0x2
 	BPF_RET                                     = 0x6
 	BPF_RSH                                     = 0x70
@@ -1336,8 +1333,6 @@ const (
 	KEY_SPEC_THREAD_KEYRING                     = -0x1
 	KEY_SPEC_USER_KEYRING                       = -0x4
 	KEY_SPEC_USER_SESSION_KEYRING               = -0x5
-<<<<<<< HEAD
-=======
 	LANDLOCK_ACCESS_FS_EXECUTE                  = 0x1
 	LANDLOCK_ACCESS_FS_MAKE_BLOCK               = 0x800
 	LANDLOCK_ACCESS_FS_MAKE_CHAR                = 0x40
@@ -1352,7 +1347,6 @@ const (
 	LANDLOCK_ACCESS_FS_REMOVE_FILE              = 0x20
 	LANDLOCK_ACCESS_FS_WRITE_FILE               = 0x2
 	LANDLOCK_CREATE_RULESET_VERSION             = 0x1
->>>>>>> grw_branch
 	LINUX_REBOOT_CMD_CAD_OFF                    = 0x0
 	LINUX_REBOOT_CMD_CAD_ON                     = 0x89abcdef
 	LINUX_REBOOT_CMD_HALT                       = 0xcdef0123
@@ -1657,19 +1651,12 @@ const (
 	NFNL_MSG_BATCH_END                          = 0x11
 	NFNL_NFA_NEST                               = 0x8000
 	NFNL_SUBSYS_ACCT                            = 0x7
-<<<<<<< HEAD
-	NFNL_SUBSYS_COUNT                           = 0xc
-=======
 	NFNL_SUBSYS_COUNT                           = 0xd
->>>>>>> grw_branch
 	NFNL_SUBSYS_CTHELPER                        = 0x9
 	NFNL_SUBSYS_CTNETLINK                       = 0x1
 	NFNL_SUBSYS_CTNETLINK_EXP                   = 0x2
 	NFNL_SUBSYS_CTNETLINK_TIMEOUT               = 0x8
-<<<<<<< HEAD
-=======
 	NFNL_SUBSYS_HOOK                            = 0xc
->>>>>>> grw_branch
 	NFNL_SUBSYS_IPSET                           = 0x6
 	NFNL_SUBSYS_NFTABLES                        = 0xa
 	NFNL_SUBSYS_NFT_COMPAT                      = 0xb
@@ -1959,15 +1946,12 @@ const (
 	PR_PAC_GET_ENABLED_KEYS                     = 0x3d
 	PR_PAC_RESET_KEYS                           = 0x36
 	PR_PAC_SET_ENABLED_KEYS                     = 0x3c
-<<<<<<< HEAD
-=======
 	PR_SCHED_CORE                               = 0x3e
 	PR_SCHED_CORE_CREATE                        = 0x1
 	PR_SCHED_CORE_GET                           = 0x0
 	PR_SCHED_CORE_MAX                           = 0x4
 	PR_SCHED_CORE_SHARE_FROM                    = 0x3
 	PR_SCHED_CORE_SHARE_TO                      = 0x2
->>>>>>> grw_branch
 	PR_SET_CHILD_SUBREAPER                      = 0x24
 	PR_SET_DUMPABLE                             = 0x4
 	PR_SET_ENDIAN                               = 0x14
@@ -2334,10 +2318,7 @@ const (
 	SECCOMP_MODE_DISABLED                       = 0x0
 	SECCOMP_MODE_FILTER                         = 0x2
 	SECCOMP_MODE_STRICT                         = 0x1
-<<<<<<< HEAD
-=======
 	SECRETMEM_MAGIC                             = 0x5345434d
->>>>>>> grw_branch
 	SECURITYFS_MAGIC                            = 0x73636673
 	SEEK_CUR                                    = 0x1
 	SEEK_DATA                                   = 0x3
@@ -2591,8 +2572,6 @@ const (
 	TCOFLUSH                                    = 0x1
 	TCOOFF                                      = 0x0
 	TCOON                                       = 0x1
-<<<<<<< HEAD
-=======
 	TCPOPT_EOL                                  = 0x0
 	TCPOPT_MAXSEG                               = 0x2
 	TCPOPT_NOP                                  = 0x1
@@ -2601,7 +2580,6 @@ const (
 	TCPOPT_TIMESTAMP                            = 0x8
 	TCPOPT_TSTAMP_HDR                           = 0x101080a
 	TCPOPT_WINDOW                               = 0x3
->>>>>>> grw_branch
 	TCP_CC_INFO                                 = 0x1a
 	TCP_CM_INQ                                  = 0x24
 	TCP_CONGESTION                              = 0xd

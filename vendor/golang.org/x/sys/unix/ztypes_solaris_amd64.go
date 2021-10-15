@@ -440,8 +440,6 @@ const (
 	POLLWRBAND = 0x100
 	POLLWRNORM = 0x4
 )
-<<<<<<< HEAD
-=======
 
 type fileObj struct {
 	Atim Timespec
@@ -482,4 +480,3 @@ const (
 	MOUNTEDOVER        = 0x40000000
 	FILE_EXCEPTION     = 0x60000070
 )
->>>>>>> grw_branch

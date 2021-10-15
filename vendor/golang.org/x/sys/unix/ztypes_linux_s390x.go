@@ -656,10 +656,7 @@ const (
 	PPS_GETCAP    = 0x800870a3
 	PPS_FETCH     = 0xc00870a4
 )
-<<<<<<< HEAD
-=======
 
 const (
 	PIDFD_NONBLOCK = 0x800
 )
->>>>>>> grw_branch

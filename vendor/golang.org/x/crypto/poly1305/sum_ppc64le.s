@@ -2,10 +2,7 @@
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
-<<<<<<< HEAD
-=======
 //go:build gc && !purego
->>>>>>> grw_branch
 // +build gc,!purego
 
 #include "textflag.h"
@@ -86,11 +83,7 @@ multiply:
 	BGE loop
 
 bytes_between_0_and_15:
-<<<<<<< HEAD
-	CMP  $0, R5
-=======
 	CMP  R5, $0
->>>>>>> grw_branch
 	BEQ  done
 	MOVD $0, R16 // h0
 	MOVD $0, R17 // h1
@@ -130,11 +123,7 @@ just1:
 	// Exactly 8
 	MOVD (R4), R16
 
-<<<<<<< HEAD
-	CMP $0, R17
-=======
 	CMP R17, $0
->>>>>>> grw_branch
 
 	// Check if we've already set R17; if not
 	// set 1 to indicate end of msg.
@@ -163,11 +152,7 @@ less4:
 	ADD   $2, R4
 
 less2:
-<<<<<<< HEAD
-	CMP   $0, R5
-=======
 	CMP   R5, $0
->>>>>>> grw_branch
 	BEQ   insert1
 	MOVBZ (R4), R21
 	SLD   R22, R21, R21
@@ -182,21 +167,12 @@ insert1:
 
 carry:
 	// Add new values to h0, h1, h2
-<<<<<<< HEAD
-	ADDC R16, R8
-	ADDE R17, R9
-	ADDE $0, R10
-	MOVD $16, R5
-	ADD  R5, R4
-	BR   multiply
-=======
 	ADDC  R16, R8
 	ADDE  R17, R9
 	ADDZE R10, R10
 	MOVD  $16, R5
 	ADD   R5, R4
 	BR    multiply
->>>>>>> grw_branch
 
 done:
 	// Save h0, h1, h2 in state
