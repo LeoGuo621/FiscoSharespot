@@ -15,7 +15,7 @@
 |   GetResAll   |   GET    |                   | 返会全部资源list，一个struct数组 |                                                |
 |    AddRes     |   POST   |                   |             增加资源             | OwnerID<br>ServiceType<br>ServiceTime<br>Price |
 |    GetRes     |   POST   |                   |      根据资源ID查询资源信息      |                     ResID                      |
-|   PreBuyRes   |   POST   |                   |               预购               |                ResID<br>ButerID                |
+|   PreBuyRes   |   POST   |                   |               预购               |                ResID<br>BuyerID                |
 |     ApRes     |   POST   |                   |            提供接入码            |              ResID<br>AccessCode               |
 |   FinalRes    |   POST   |                   |           结束服务记录           |                     ResID                      |
 
