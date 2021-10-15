@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+//go:build plan9
+>>>>>>> grw_branch
 // +build plan9
 
 package isatty

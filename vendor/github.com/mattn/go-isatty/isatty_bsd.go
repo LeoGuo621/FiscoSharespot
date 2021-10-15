@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+//go:build (darwin || freebsd || openbsd || netbsd || dragonfly) && !appengine
+>>>>>>> grw_branch
 // +build darwin freebsd openbsd netbsd dragonfly
 // +build !appengine
 

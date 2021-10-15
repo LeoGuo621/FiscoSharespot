@@ -1,30 +1,18 @@
 package main
 
 import (
-	"fiscoSharespot/routes"
-	//	"net/http"
-	"github.com/gin-gonic/gin"
+	"fiscoSharespot/routers"
+	"log"
 )
+/*
+	./solc-0.4.25 --bin --abi -o ../sols/ ../sols/UserManagement.sol
+	./abigen.exe --bin ../sols/UserManagement.bin --abi ../sols/UserManagement.abi --pkg contracts --type UserManagement --out ../contracts/user_management.go
+*/
 
-func main() {
-
-	routes.Init()
-	//caonima := "0xC"
-	//n , err := strconv.ParseUint(caonima[2:],16,32)
-	//if err != nil{
-	//	fmt.Println("cao")
-	//}
-	//fmt.Println("fuckn=",n)
-	r := gin.Default()
-
-	r.GET("/BlockNumber", routes.BlockNumber)
-	r.GET("/NodePeers", routes.NodePeers)
-	r.GET("/SyncStatus", routes.SyncStatus)
-	r.POST("/BlockByNumber", routes.BlockbyNumber)
-	r.GET("/TotTxCount", routes.TotalTransactionCount)
-
-	//r.GET("/blockbyhash", routes.BlockbyHash)
-
-	r.Run()
-
+func main(){
+	r := routers.InitRouter()
+	err := r.Run(":8080")
+	if err != nil {
+		log.Printf("start dapp failed %s", err)
+	}
 }

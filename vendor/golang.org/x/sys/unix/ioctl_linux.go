@@ -48,15 +48,25 @@ func IoctlSetRTCWkAlrm(fd int, value *RTCWkAlrm) error {
 // IoctlGetEthtoolDrvinfo fetches ethtool driver information for the network
 // device specified by ifname.
 func IoctlGetEthtoolDrvinfo(fd int, ifname string) (*EthtoolDrvinfo, error) {
+<<<<<<< HEAD
 	ifr, err := newIfreq(ifname)
+=======
+	ifr, err := NewIfreq(ifname)
+>>>>>>> grw_branch
 	if err != nil {
 		return nil, err
 	}
 
 	value := EthtoolDrvinfo{Cmd: ETHTOOL_GDRVINFO}
+<<<<<<< HEAD
 	ifrd := ifr.SetData(unsafe.Pointer(&value))
 
 	err = ioctlPtr(fd, SIOCETHTOOL, unsafe.Pointer(&ifrd))
+=======
+	ifrd := ifr.withData(unsafe.Pointer(&value))
+
+	err = ioctlIfreqData(fd, SIOCETHTOOL, &ifrd)
+>>>>>>> grw_branch
 	return &value, err
 }
 
@@ -176,3 +186,24 @@ func IoctlHIDGetRawUniq(fd int) (string, error) {
 	err := ioctlPtr(fd, _HIDIOCGRAWUNIQ, unsafe.Pointer(&value[0]))
 	return ByteSliceToString(value[:]), err
 }
+<<<<<<< HEAD
+=======
+
+// IoctlIfreq performs an ioctl using an Ifreq structure for input and/or
+// output. See the netdevice(7) man page for details.
+func IoctlIfreq(fd int, req uint, value *Ifreq) error {
+	// It is possible we will add more fields to *Ifreq itself later to prevent
+	// misuse, so pass the raw *ifreq directly.
+	return ioctlPtr(fd, req, unsafe.Pointer(&value.raw))
+}
+
+// TODO(mdlayher): export if and when IfreqData is exported.
+
+// ioctlIfreqData performs an ioctl using an ifreqData structure for input
+// and/or output. See the netdevice(7) man page for details.
+func ioctlIfreqData(fd int, req uint, value *ifreqData) error {
+	// The memory layout of IfreqData (type-safe) and ifreq (not type-safe) are
+	// identical so pass *IfreqData directly.
+	return ioctlPtr(fd, req, unsafe.Pointer(value))
+}
+>>>>>>> grw_branch

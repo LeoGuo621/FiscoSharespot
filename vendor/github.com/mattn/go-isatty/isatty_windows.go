@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 // +build windows
 // +build !appengine
+=======
+//go:build windows && !appengine
+// +build windows,!appengine
+>>>>>>> grw_branch
 
 package isatty
 
@@ -76,7 +81,11 @@ func isCygwinPipeName(name string) bool {
 }
 
 // getFileNameByHandle use the undocomented ntdll NtQueryObject to get file full name from file handler
+<<<<<<< HEAD
 // since GetFileInformationByHandleEx is not avilable under windows Vista and still some old fashion
+=======
+// since GetFileInformationByHandleEx is not available under windows Vista and still some old fashion
+>>>>>>> grw_branch
 // guys are using Windows XP, this is a workaround for those guys, it will also work on system from
 // Windows vista to 10
 // see https://stackoverflow.com/a/18792477 for details

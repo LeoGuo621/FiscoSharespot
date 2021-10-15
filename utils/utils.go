@@ -15,7 +15,8 @@ const (
 	RecodeParamErr  = "4003"
 	RecodeSysErr     = "4004"
 	RecodeFiscoErr   = "4105"
-	RecodeUnknownErr = "4106"
+	RecodeContractErr   = "4106"
+	RecodeUnknownErr = "4107"
 )
 
 var recodeText = map[string]string{
@@ -25,6 +26,7 @@ var recodeText = map[string]string{
 	RecodeParamErr:   "Parameter error",
 	RecodeSysErr:     "System error",
 	RecodeFiscoErr:   "Error interacting with Fisco",
+	RecodeContractErr:   "Error interacting with contract",
 	RecodeUnknownErr: "Unknown error",
 }
 

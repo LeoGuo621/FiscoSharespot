@@ -20,7 +20,10 @@ package unix
 //sysnb	Getgid() (gid int)
 //sysnb	Getrlimit(resource int, rlim *Rlimit) (err error)
 //sysnb	Getuid() (uid int)
+<<<<<<< HEAD
 //sysnb	InotifyInit() (fd int, err error)
+=======
+>>>>>>> grw_branch
 //sys	Lchown(path string, uid int, gid int) (err error)
 //sys	Listen(s int, n int) (err error)
 //sys	Lstat(path string, stat *Stat_t) (err error)
