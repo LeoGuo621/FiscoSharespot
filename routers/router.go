@@ -29,7 +29,10 @@ func InitRouter() *gin.Engine {
 		apiV1.GET("/userContractAddress",v1.GetUserManagementContractAddress)
 		apiV1.POST("/user", v1.AddUser)
 		apiV1.GET("/allUsers", v1.GetAllUsers)
-
+		apiV1.POST("/transfer", v1.Transfer)
+		apiV1.POST("/balanceByID", v1.BalanceByID)
+		apiV1.POST("/balanceByPubKey", v1.BalanceByPubKey)
+		apiV1.POST("/userByID",v1.UserByID)
 		// resource api
 		apiV1.GET("/resourceContractAddress",v1.GetResourceManagementContractAddress)
 		apiV1.POST("/resource",v1.AddResource)

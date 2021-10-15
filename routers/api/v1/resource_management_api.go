@@ -215,16 +215,16 @@ func ResourceByResourceID(c *gin.Context)  {
 		TransactOpts: *conn.GetTransactOpts(),
 	}
 
-	resources , err := resourceManagementSession.GetResource(resourceID)
+	resource , err := resourceManagementSession.GetResource(resourceID)
 
 	if err != nil{
 		fmt.Println("Get Resources Failed!")
 		resp.Recode = utils.RecodeFiscoErr
 	}
 
-	fmt.Printf("%+v", resources)
+	//fmt.Printf("%+v", resource)
 
-	resp.Data = resources
+	resp.Data = resource
 }
 
 // GetAllResources GET /allResources
