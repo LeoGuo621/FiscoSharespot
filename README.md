@@ -6,13 +6,13 @@
 
 |   请求名称    | 请求方法 |               功能               |                      参数                      |
 | :-----------: | :------: | :------------------------------: | :--------------------------------------------: |
-|  BlockNumber  |   GET       |         查询当前区块高度         |                                                |
-|   NodePeers   |   GET       |         查询P2P节点信息          |                                                |
-|  SyncStatus   |   GET        |      查询群组内同步状态信息      |                                                |
-| BlockByNumber |   POST    |      根据区块号查询区块信息      |                  BlockNumber                   |
-|  TotTxCount   |   GET     |         查询当前总交易数         |                                                |
+|  blockNumber  |   GET       |         查询当前区块高度         |                                                |
+|   nodePeers   |   GET       |         查询P2P节点信息          |                                                |
+|  syncStatus   |   GET        |      查询群组内同步状态信息      |                                                |
+| blockByNumber |   POST    |      根据区块号查询区块信息      |                  blockNumber                   |
+|  totalTransactionCount   |   GET     |         查询当前总交易数         |                                                |
 |   resourceAddress   |   GET                     |           获取部署的资源池合约地址信息            |                                                |
-|   resourceAdd   |   POST                  | 新增一个资源 |               OwnerID<br>ServiceType<br>ServiceTime<br>Price                                 |
+|   resourceAdd   |   POST                  | 新增一个资源 |               ownerID<br>serviceType<br>serviceTime<br>price                                 |
 |    resourcePreBuy     |   POST                   |             预购一个资源             | resourceID<br>buyerID |
 |    resourceGrant     |   POST                    |      Ap提供接入码      |                     resourceID<br>accessCode                      |
 |   resourceFinish   |   POST                    |               资源服务结束               |                resourceID           |
