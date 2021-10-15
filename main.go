@@ -6,7 +6,7 @@ import (
 )
 /*
 	./solc-0.4.25 --bin --abi -o ../sols/ ../sols/UserManagement.sol
-	./abigen.exe --bin ../sols/UserManagement.bin --abi ../sols/UserManagement.abi --pkg contracts --type UserManagement --out ../contracts/user_management.go
+	./abigen.exe --bin ../sols/UserManagement.bin --abi ../sols/UserManagement.abi --pkg user_management --type UserManagement --out ../user_management/user_management.go
 */
 
 func main(){

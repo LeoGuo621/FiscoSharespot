@@ -25,9 +25,20 @@ func InitRouter() *gin.Engine {
 		apiV1.GET("/syncStatus", v1.GetSyncStatus)
 		apiV1.POST("/blockByNumber", v1.BlockByNumber)
 		apiV1.GET("/totalTransactionCount", v1.GetTotalTransactionCount)
-		// contract api
+		// user api
+		apiV1.GET("/userContractAddress",v1.GetUserManagementContractAddress)
 		apiV1.POST("/user", v1.AddUser)
 		apiV1.GET("/allUsers", v1.GetAllUsers)
+
+		// resource api
+		apiV1.GET("/resourceContractAddress",v1.GetResourceManagementContractAddress)
+		apiV1.POST("/resource",v1.AddResource)
+		apiV1.POST("/resourcePreBuy",v1.PreBuyResource)
+		apiV1.POST("/resourceGrant",v1.GrantResource)
+		apiV1.POST("/resourceFinish",v1.FinishResource)
+		apiV1.POST("/resourceByResourceID",v1.ResourceByResourceID)
+		apiV1.GET("/allResources",v1.GetAllResources)
+		apiV1.POST("/resourceByStatus",v1.ResourceByStatus)
 	}
 	// 静态文件路由
 	//r.StaticFS("/web", http.Dir("./dist/"))

@@ -1,7 +1,8 @@
 package v1
 
 import (
-	"fiscoSharespot/contracts"
+	"fiscoSharespot/resource_management"
+	"fiscoSharespot/user_management"
 	"fiscoSharespot/utils"
 	"github.com/FISCO-BCOS/go-sdk/client"
 	"github.com/FISCO-BCOS/go-sdk/conf"
@@ -16,7 +17,11 @@ var conn *client.Client
 // Contract Info
 var userManagementAddress common.Address
 var userManagementContractTX *types.Transaction
-var userManagementInstance *contracts.UserManagement
+var userManagementInstance *user_management.UserManagement
+
+var resourceManagementAddress common.Address
+var resourceManagementContractTX *types.Transaction
+var resourceManagementInstance *resource_management.ResourceManagement
 
 func init() {
 	configs, err := conf.ParseConfigFile("config.toml")
@@ -27,10 +32,16 @@ func init() {
 	if err != nil {
 		log.Fatalf("Dial failed, err: %v", err)
 	}
-	userManagementAddress, userManagementContractTX, userManagementInstance, err = contracts.DeployUserManagement(conn.GetTransactOpts(), conn)
+	userManagementAddress, userManagementContractTX, userManagementInstance, err = user_management.DeployUserManagement(conn.GetTransactOpts(), conn)
 	if err != nil {
 		log.Fatalf("DeployUserManagement failed, err: %v", err)
 	}
+
+	resourceManagementAddress, resourceManagementContractTX, resourceManagementInstance, err = resource_management.DeployResourceManagement(conn.GetTransactOpts(), conn)
+	if err != nil {
+		log.Fatalf("DeployResourcePool failed, err: %v", err)
+	}
+
 }
 
 // ResponseData response
@@ -47,5 +58,16 @@ func GetUserManagementContractAddress(c *gin.Context) {
 
 	mapResp := make(map[string]interface{})
 	mapResp["user_management_contract_address"] = userManagementAddress
+	resp.Data = mapResp
+}
+
+// GetResourceManagementContractAddress GET: /resourceManagementAddress
+func GetResourceManagementContractAddress(c *gin.Context) {
+	var resp utils.Resp
+	resp.Recode = utils.RecodeOk
+	defer ResponseData(c, &resp)
+
+	mapResp := make(map[string]interface{})
+	mapResp["resource_pool_contract_address"] = resourceManagementAddress
 	resp.Data = mapResp
 }

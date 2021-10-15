@@ -1,7 +1,7 @@
 package v1
 
 import (
-	"fiscoSharespot/contracts"
+	"fiscoSharespot/user_management"
 	"fiscoSharespot/utils"
 	"fmt"
 	"github.com/gin-gonic/gin"
@@ -19,7 +19,7 @@ func AddUser(c *gin.Context)  {
 	name := c.PostForm("name")
 	passwordEncoded := c.PostForm("passwordEncoded")
 
-	userManagementSession := &contracts.UserManagementSession{
+	userManagementSession := &user_management.UserManagementSession{
 		Contract:     userManagementInstance,
 		CallOpts:     *conn.GetCallOpts(),
 		TransactOpts: *conn.GetTransactOpts(),
@@ -44,7 +44,7 @@ func GetAllUsers(c *gin.Context)  {
 	}
 	defer ResponseData(c, &resp)
 
-	userManagementSession := &contracts.UserManagementSession{
+	userManagementSession := &user_management.UserManagementSession{
 		Contract:     userManagementInstance,
 		CallOpts:     *conn.GetCallOpts(),
 		TransactOpts: *conn.GetTransactOpts(),
