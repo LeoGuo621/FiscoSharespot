@@ -4,20 +4,21 @@
 
 ## 请求列表
 
-|   请求名称    | 请求方法 |    请求返回key    |               功能               |                      参数                      |
-| :-----------: | :------: | :---------------: | :------------------------------: | :--------------------------------------------: |
-|  BlockNumber  |   GET    |   block_number    |         查询当前区块高度         |                                                |
-|   NodePeers   |   GET    |    node_peers     |         查询P2P节点信息          |                                                |
-|  SyncStatus   |   GET    |    sync_status    |      查询群组内同步状态信息      |                                                |
-| BlockByNumber |   POST   | block_information |      根据区块号查询区块信息      |                  BlockNumber                   |
-|  TotTxCount   |   GET    |   tot_trans_cnt   |         查询当前总交易数         |                                                |
-|   DeployRes   |   GET    |                   |           部署资源合约           |                                                |
-|   GetResAll   |   GET    |                   | 返会全部资源list，一个struct数组 |                                                |
-|    AddRes     |   POST   |                   |             增加资源             | OwnerID<br>ServiceType<br>ServiceTime<br>Price |
-|    GetRes     |   POST   |                   |      根据资源ID查询资源信息      |                     ResID                      |
-|   PreBuyRes   |   POST   |                   |               预购               |                ResID<br>BuyerID                |
-|     ApRes     |   POST   |                   |            提供接入码            |              ResID<br>AccessCode               |
-|   FinalRes    |   POST   |                   |           结束服务记录           |                     ResID                      |
+|   请求名称    | 请求方法 |               功能               |                      参数                      |
+| :-----------: | :------: | :------------------------------: | :--------------------------------------------: |
+|  BlockNumber  |   GET       |         查询当前区块高度         |                                                |
+|   NodePeers   |   GET       |         查询P2P节点信息          |                                                |
+|  SyncStatus   |   GET        |      查询群组内同步状态信息      |                                                |
+| BlockByNumber |   POST    |      根据区块号查询区块信息      |                  BlockNumber                   |
+|  TotTxCount   |   GET     |         查询当前总交易数         |                                                |
+|   resourceAddress   |   GET                     |           获取部署的资源池合约地址信息            |                                                |
+|   resourceAdd   |   POST                  | 新增一个资源 |               OwnerID<br>ServiceType<br>ServiceTime<br>Price                                 |
+|    resourcePreBuy     |   POST                   |             预购一个资源             | resourceID<br>buyerID |
+|    resourceGrant     |   POST                    |      Ap提供接入码      |                     resourceID<br>accessCode                      |
+|   resourceFinish   |   POST                    |               资源服务结束               |                resourceID           |
+|     resourceIDGet     |   POST          |            根据资源号获取资源信息            |             resourceID               |
+|   resourceAllGet    |   GET     |           获取资源池所有资源信息           |                                           |
+|    resourceStatusGet| POST |  根据资源状态获取资源信息ForSale,PreBuy,Serving,ServiceFinished|resourceStatus|
 
 
 
