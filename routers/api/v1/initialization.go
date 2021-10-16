@@ -8,12 +8,14 @@ import (
 	"github.com/FISCO-BCOS/go-sdk/conf"
 	"github.com/FISCO-BCOS/go-sdk/core/types"
 	"github.com/ethereum/go-ethereum/common"
+	"github.com/gin-contrib/sessions/cookie"
 	"github.com/gin-gonic/gin"
 	"log"
 	"net/http"
 )
 
 var conn *client.Client
+var Store cookie.Store
 // Contract Info
 var userManagementAddress common.Address
 var userManagementContractTX *types.Transaction
@@ -24,6 +26,7 @@ var resourceManagementContractTX *types.Transaction
 var resourceManagementInstance *resource_management.ResourceManagement
 
 func init() {
+	Store = cookie.NewStore([]byte("Fintechathon2021"))
 	configs, err := conf.ParseConfigFile("config.toml")
 	if err != nil {
 		log.Fatalf("ParseConfigFile failed, err: %v", err)

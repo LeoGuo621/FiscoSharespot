@@ -3,19 +3,20 @@ package routers
 import (
 	v1 "fiscoSharespot/routers/api/v1"
 	"fmt"
+	"github.com/gin-contrib/sessions"
 	"github.com/gin-gonic/gin"
 	"net/http"
 	"strings"
 )
 
-
 // InitRouter 初始化路由信息
 func InitRouter() *gin.Engine {
+
 	r := gin.New()
 	r.Use(gin.Logger())
 	r.Use(gin.Recovery())
+	r.Use(sessions.Sessions("session", v1.Store))
 	r.Use(Cors())
-
 	apiV1 := r.Group("/api/v1")
 	{
 		// blockchain api
@@ -25,14 +26,17 @@ func InitRouter() *gin.Engine {
 		apiV1.GET("/syncStatus", v1.GetSyncStatus)
 		apiV1.POST("/blockByNumber", v1.BlockByNumber)
 		apiV1.GET("/totalTransactionCount", v1.GetTotalTransactionCount)
+
 		// user api
 		apiV1.GET("/userContractAddress",v1.GetUserManagementContractAddress)
 		apiV1.POST("/user", v1.AddUser)
+		apiV1.POST("login", v1.Login)
 		apiV1.GET("/allUsers", v1.GetAllUsers)
 		apiV1.POST("/transfer", v1.Transfer)
 		apiV1.POST("/balanceByID", v1.BalanceByID)
 		apiV1.POST("/balanceByPubKey", v1.BalanceByPubKey)
 		apiV1.POST("/userByID",v1.UserByID)
+
 		// resource api
 		apiV1.GET("/resourceContractAddress",v1.GetResourceManagementContractAddress)
 		apiV1.POST("/resource",v1.AddResource)

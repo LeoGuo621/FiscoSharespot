@@ -5,7 +5,9 @@ go 1.17
 require (
 	github.com/FISCO-BCOS/go-sdk v0.11.0
 	github.com/ethereum/go-ethereum v1.10.9
+	github.com/gin-contrib/sessions v0.0.3
 	github.com/gin-gonic/gin v1.7.4
+	github.com/gorilla/sessions v1.2.1
 )
 
 require (
@@ -20,6 +22,8 @@ require (
 	github.com/go-stack/stack v1.8.0 // indirect
 	github.com/golang/protobuf v1.4.3 // indirect
 	github.com/google/uuid v1.1.5 // indirect
+	github.com/gorilla/context v1.1.1 // indirect
+	github.com/gorilla/securecookie v1.1.1 // indirect
 	github.com/hashicorp/hcl v1.0.0 // indirect
 	github.com/json-iterator/go v1.1.9 // indirect
 	github.com/leodido/go-urn v1.2.0 // indirect

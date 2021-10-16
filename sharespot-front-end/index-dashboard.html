@@ -1,0 +1,873 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- 
+        * @Package:  B-RAN
+        * @Version: 5.0.0
+        * @Time: 9.6-1100
+    -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>ShareSpot</title>
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon" />
+    <!-- For iPhone -->
+    <link rel="apple-touch-icon-precomposed" href="assets/images/apple-touch-icon-57-precomposed.png">
+    <!-- For iPhone 4 Retina display -->
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/images/apple-touch-icon-114-precomposed.png">
+    <!-- For iPad -->
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/images/apple-touch-icon-72-precomposed.png">
+    <!-- For iPad Retina display -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/images/apple-touch-icon-144-precomposed.png">
+
+    <!-- CORE CSS FRAMEWORK - START -->
+    <link href="assets/plugins/pace/pace-theme-flash.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/plugins/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/fonts/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css" />
+    <link href="assets/fonts/webfont/cryptocoins.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/animate.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/plugins/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" type="text/css" />
+    <!-- CORE CSS FRAMEWORK - END -->
+
+    <!-- HEADER SCRIPTS INCLUDED ON THIS PAGE - START -->
+
+    <link href="assets/plugins/jvectormap/jquery-jvectormap-2.0.1.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="assets/plugins/morris-chart/css/morris.css" rel="stylesheet" type="text/css" media="screen" />
+
+    <!-- HEADER SCRIPTS INCLUDED ON THIS PAGE - END -->
+
+    <!-- CORE CSS TEMPLATE - START -->
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="https://tokrix.netlify.app/assets/css/responsive.css" rel="stylesheet" type="text/css" />
+    <!-- CORE CSS TEMPLATE - END -->
+
+    <!-- CORE JS FRAMEWORK - START -->
+    <script src="assets/js/jquery-1.11.2.min.js"></script>
+    <script src="assets/js/jquery.easing.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/plugins/pace/pace.min.js"></script>
+    <script src="assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="assets/plugins/viewport/viewportchecker.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="assets/js/jquery-1.11.2.min.js"><\/script>');
+    </script>
+    <!-- CORE JS FRAMEWORK - END -->
+
+    <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - START -->
+
+    <script src="assets/plugins/echarts/echarts-custom-for-dashboard.js"></script>
+
+    <script src="assets/plugins/flot-chart/jquery.flot.js"></script>
+    <script src="assets/plugins/flot-chart/jquery.flot.time.js"></script>
+    <script src="assets/js/chart-flot.js"></script>
+
+    <script src="assets/plugins/morris-chart/js/raphael-min.js"></script>
+    <script src="assets/plugins/morris-chart/js/morris.min.js"></script>
+    <script src="assets/js/chart-morris.js"></script>
+    <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - END -->
+
+    <!-- CORE TEMPLATE JS - START -->
+    <script src="assets/js/scripts.js"></script>
+    <script src="js/middleware.js"></script>
+    <!-- END CORE TEMPLATE JS - END -->
+
+</head>
+<!-- END HEAD -->
+
+<!-- BEGIN BODY -->
+
+<body class=" ">
+    <!-- START TOPBAR -->
+    <div class='page-topbar '>
+        <div class='logo-area'>
+
+        </div>
+        <div class='quick-area'>
+            <div class='pull-left'>
+                <ul class="info-menu left-links list-inline list-unstyled">
+                    <li class="sidebar-toggle-wrap">
+                        <a href="#" data-toggle="sidebar" class="sidebar_toggle">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </li>
+<!--                    <li class="notify-toggle-wrapper">-->
+<!--                        <a href="#" data-toggle="dropdown" class="toggle">-->
+<!--                            <i class="fa fa-bell"></i>-->
+<!--                            <span class="badge badge-accent">3</span>-->
+<!--                        </a>-->
+<!--                        <ul class="dropdown-menu notifications animated fadeIn">-->
+<!--                            <li class="total">-->
+<!--                                <span class="small">-->
+<!--                                您有<strong>3</strong>条新通知-->
+<!--                                <a href="javascript:;" class="pull-right">标记所有消息为已读</a>-->
+<!--                            </span>-->
+<!--                            </li>-->
+<!--                            <li class="list">-->
+
+<!--                                <ul class="dropdown-menu-list list-unstyled ps-scrollbar">-->
+<!--                                    <li class="unread available">-->
+<!--                                        &lt;!&ndash; available: success, warning, info, error &ndash;&gt;-->
+<!--                                        <a href="javascript:;">-->
+<!--                                            <div class="notice-icon">-->
+<!--                                                <i class="fa fa-check"></i>-->
+<!--                                            </div>-->
+<!--                                            <div>-->
+<!--                                                <span class="name">-->
+<!--                                                    <strong>成功交易1CNY</strong>-->
+<!--                                                    <span class="time small">15分钟前</span>-->
+<!--                                                </span>-->
+<!--                                            </div>-->
+<!--                                        </a>-->
+<!--                                    </li>-->
+<!--                                    <li class="unread away">-->
+<!--                                        &lt;!&ndash; available: success, warning, info, error &ndash;&gt;-->
+<!--                                        <a href="javascript:;">-->
+<!--                                            <div class="notice-icon">-->
+<!--                                                <i class="fa fa-clock-o"></i>-->
+<!--                                            </div>-->
+<!--                                            <div>-->
+<!--                                                <span class="name">-->
+<!--                                                    <strong>4个交易待打包</strong>-->
+<!--                                                    <span class="time small">45分钟前</span>-->
+<!--                                                </span>-->
+<!--                                            </div>-->
+<!--                                        </a>-->
+<!--                                    </li>-->
+<!--                                    <li class=" busy">-->
+<!--                                        &lt;!&ndash; available: success, warning, info, error &ndash;&gt;-->
+<!--                                        <a href="javascript:;">-->
+<!--                                            <div class="notice-icon">-->
+<!--                                                <i class="fa fa-times"></i>-->
+<!--                                            </div>-->
+<!--                                            <div>-->
+<!--                                                <span class="name">-->
+<!--                                                    <strong>取消1个交易</strong>-->
+<!--                                                    <span class="time small">1小时前</span>-->
+<!--                                                </span>-->
+<!--                                            </div>-->
+<!--                                        </a>-->
+<!--                                    </li>-->
+<!--                                   -->
+<!--                                    <li class=" available">-->
+<!--                                        &lt;!&ndash; available: success, warning, info, error &ndash;&gt;-->
+<!--                                        <a href="javascript:;">-->
+<!--                                            <div class="notice-icon">-->
+<!--                                                <i class="fa fa-check"></i>-->
+<!--                                            </div>-->
+<!--                                            <div>-->
+<!--                                                <span class="name">-->
+<!--                                                    <strong>成功交易2CNY</strong>-->
+<!--                                                    <span class="time small">3月14日</span>-->
+<!--                                                </span>-->
+<!--                                            </div>-->
+<!--                                        </a>-->
+<!--                                    </li>-->
+
+<!--                                </ul>-->
+
+<!--                            </li>-->
+
+<!--&lt;!&ndash;                            <li class="external">&ndash;&gt;-->
+<!--&lt;!&ndash;                                <a href="javascript:;">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <span>Read All Notifications</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                                </a>&ndash;&gt;-->
+<!--&lt;!&ndash;                            </li>&ndash;&gt;-->
+<!--                        </ul>-->
+<!--                    </li>-->
+                    <li class="hidden-sm hidden-xs searchform">
+                        <form action="#" method="post">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                <i class="fa fa-search"></i>
+                            </span>
+                                <input type="text" class="form-control animated fadeIn" placeholder="搜索">
+                            </div>
+                            <input type='submit' value="">
+                        </form>
+                    </li>
+                </ul>
+            </div>
+            <div class='pull-right'>
+                <ul class="info-menu right-links list-inline list-unstyled">
+                    <li class="profile">
+                        <a href="#" data-toggle="dropdown" class="toggle">
+                            <img src="data/profile/profile-crm.jpg" alt="user-image" class="img-circle img-inline">
+                            <span id="title_nickname">Jiaheng Wang <i class="fa fa-angle-down"></i></span>
+                        </a>
+                        <ul class="dropdown-menu profile animated fadeIn">
+                            <li>
+                                <a href="account-confirmation.html">
+                                    <i class="fa fa-wrench"></i> 设置
+                                </a>
+                            </li>
+<!--                            <li>-->
+<!--                                <a href="ui-profile.html">-->
+<!--                                    <i class="fa fa-user"></i> 个人资料-->
+<!--                                </a>-->
+<!--                            </li>-->
+                            <li>
+                                <a href="ui-support.html">
+                                    <i class="fa fa-info"></i> 帮助
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:logout();">
+                                    <i class="fa fa-lock"></i> 退出登录
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <!-- END TOPBAR -->
+    <!-- START CONTAINER -->
+    <div class="page-container row-fluid container-fluid">
+
+        <!-- SIDEBAR - START -->
+
+        <div class="page-sidebar fixedscroll">
+
+            <!-- MAIN MENU - START -->
+            <div class="page-sidebar-wrapper" id="main-menu-wrapper">
+
+
+                <ul class='wraplist'>
+<!--                    <li class='menusection'>我的</li>-->
+                    <li class="open">
+                        <a href="index-dashboard.html">
+                            <i class="fa fa-th-large"></i>
+                            <span class="title">概览</span>
+                        </a>
+                    </li>
+
+
+                    <li class="">
+                        <a href="javascript:;">
+                            <i class="fa fa-exchange"></i>
+                            <span class="title">资源共享/交易</span>
+                            <span class="arrow "></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a class="" href="buying.html">购买</a>
+                            </li>
+                            <li>
+                                <a class="" href="selling.html">出售</a>
+                            </li>
+                            <li>
+                                <a class="" href="sharing.html">授权</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="">
+                        <a href="security.html">
+                            <i class="fa fa-lock"></i>
+                            <span class="title">安全</span>
+                        </a>
+                    </li>
+
+                    <li class="">
+                        <a href="javascript:;">
+                            <i class="fa fa-gear"></i>
+                            <span class="title">设置</span>
+                            <span class="arrow "></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a class="" href="settings.html">通用</a>
+                            </li>
+                            <li>
+                                <a class="" href="account-confirmation.html">账户认证</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="javascript:;">
+                            <i class="fa fa-question-circle"></i>
+                            <span class="title">技术支持</span>
+                            <span class="arrow "></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a class="" href="ui-faq.html">常见问题</a>
+                            </li>
+                            <li>
+                                <a class="" href="ui-support.html">帮助中心</a>
+                            </li>
+                        </ul>
+                    </li>
+<!--                    Layouts-->
+<!--                    Applications-->
+<!--                    Data Visualization-->
+<!--                    Morris Charts-->
+<!--                    Charts JS-->
+<!--                    Flot Charts-->
+<!--                    Sparkline Charts-->
+<!--                    <li class='menusection'>User Interface</li>-->
+<!--                    Ui Elements-->
+<!--                    Components-->
+<!--                    Appearance-->
+                    
+                </ul>
+
+            </div>
+            <!-- MAIN MENU - END -->
+
+        </div>
+        <!--  SIDEBAR - END -->
+
+        <!-- START CONTENT -->
+        <section id="main-content" class=" ">
+            <div class="wrapper main-wrapper row" style=''>
+
+                <div class='col-xs-12'>
+                    <div class="page-title">
+
+                        <div class="pull-left">
+                            <!-- PAGE HEADING TAG - START -->
+                            <h1 class="title">概览</h1>
+                            <!-- PAGE HEADING TAG - END -->
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <section class="box nobox marginBottom0">
+                        <div class="content-body">
+                            <div class="row">
+                                <div class="col-lg-4 col-sm-6 col-xs-12">
+                                    <div class="r4_counter db_box">
+                                        <div class="icon-after">&yen;</div>
+                                        <i class='pull-left icon-md icon-primary mt-10'>&yen;</i>
+                                        <div class="stats">
+                                            <h3 id="title_balance" class="mb-5"></h3>
+                                            <span>账户余额</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-sm-6 col-xs-12">
+                                    <div class="r4_counter db_box">
+                                        <div class="icon-after">H</div>
+                                        <i class='pull-left icon-md icon-primary mt-10'>H</i>
+                                        <div class="stats">
+                                            <h3 class="mb-5" id="blockNumber"></h3>
+                                            <span>当前区块高度</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-sm-6 col-xs-12">
+                                    <div class="r4_counter db_box has-gradient-to-right-bottom">
+                                        <div class="icon-after">S</div>
+                                        <i class='pull-left icon-md icon-primary mt-10'>S</i>
+                                        <div class="stats">
+                                            <h3 class="mb-5" id="label_bchealth"></h3>
+                                            <span>平台运行状态</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End .row -->
+                        </div>
+                    </section>
+                </div>
+
+                <div class="clearfix"></div>
+                <!-- MAIN CONTENT AREA STARTS -->
+                <!--
+                <div class="col-lg-8">
+                    <section class="box" style="overflow:hidden">
+                        <header class="panel_header">
+                            <h2 class="title pull-left">余额变化分析</h2>
+                            <div class="actions panel_actions pull-right">
+                                <a class="box_toggle fa fa-chevron-down"></a>
+                                <a class="box_setting fa fa-cog" data-toggle="modal" href="#section-settings"></a>
+                                <a class="box_close fa fa-times"></a>
+                            </div>
+                        </header>
+                        <div class="content-body">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div id="demoarea-chart">
+                                        <div id="demoarea-container" style="width: 100%;height:310px; text-align: center; margin:0 auto;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </section>
+                </div>
+            -->
+
+                <div class="clearfix"></div>
+
+                <div class="col-lg-4">
+                    <section class="box has-border-left-3">
+                        <header class="panel_header">
+                            <h2 class="title pull-left">转账</h2>
+                            <div class="actions panel_actions pull-right">
+                                <a class="box_toggle fa fa-chevron-down"></a>
+                                <a class="box_close fa fa-times"></a>
+                            </div>
+                        </header>
+                        <div class="content-body">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="transfer-wraper">
+                                        <div class="form-group no-mb">
+                                            <label class="form-label">数额</label>
+                                            <span class="desc">最小为0.01CNY</span>
+
+                                            <div class="input-group mb-10">
+                                                <span class="input-group-addon">￥</span>
+                                                <input id="input_amount" type="text" class="form-control" aria-label="Amount (to the nearest dollar)" placeholder="输入金额">
+                                                <div class="input-group-btn">
+                                                    <button type="button" class="btn btn-red dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                                            CNY <span class="caret"></span>
+                                                    </button>
+
+<!--                                                    <ul class="dropdown-menu dropdown-red no-spacing">-->
+<!--                                                        <li><a href="#">LTC</a></li>-->
+<!--                                                        <li><a href="#">DASH</a></li>-->
+<!--                                                        <li><a href="#">Ripple</a></li>-->
+<!--                                                    </ul>-->
+                                                </div>
+
+                                            </div>
+
+                                            <label class="form-label">对方账户ID</label>
+                                            <span class="desc"></span>
+
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                        <span class="arrow"></span>
+                                                <img src="data/icons/wallet-o.png" alt="icon">
+                                                </span>
+                                                <input id="input_toid" type="text" class="form-control" placeholder="">
+                                            </div>
+
+                                            <button id="btn_transfer" type="button" class="btn btn-primary btn-lg mt-20 has-gradient-to-right-bottom" style="width:100%"> 确认转账</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+<!--                <div class="col-lg-4">-->
+<!--                    <section class="box has-border-left-3">-->
+<!--                        <header class="panel_header">-->
+<!--                            <h2 class="title pull-left">我的近期交易</h2>-->
+<!--                            <div class="actions panel_actions pull-right">-->
+<!--                                <a class="box_toggle fa fa-chevron-down"></a>-->
+<!--                                <a class="box_setting fa fa-cog" data-toggle="modal" href="#section-settings"></a>-->
+<!--                                <a class="box_close fa fa-times"></a>-->
+<!--                            </div>-->
+<!--                        </header>-->
+<!--                        <div class="content-body">-->
+<!--                            <div class="row">-->
+<!--                                <div class="col-xs-12">-->
+<!--                                    <div class="transaction-wraper">-->
+<!--                                        <div class="transaction-info has-gradient-to-right-bottom">-->
+<!--                                            <img alt="" src="data/profile/jhwang.png" class="img-responsive img-circle">-->
+<!--                                            <strong class="color-white">200<span> CNY</span></strong>-->
+<!--                                        </div>-->
+<!--                                        <span class="transaction-opration"><i class="fa fa-arrow-right cancelled"></i></span>-->
+<!--                                        <div class="transaction-info">-->
+<!--                                            <img alt="" src="data/profile/profile-crm.jpg" class="img-responsive img-circle">-->
+<!--                                            <strong><span>OxsD1..</span></strong>-->
+<!--                                        </div>-->
+
+<!--                                        <hr>-->
+
+<!--                                        <div class="transaction-info bg-gray">-->
+<!--                                            <img alt="" src="data/profile/jhwang.png" class="img-responsive img-circle">-->
+<!--                                            <strong>30<span> CNY</span></strong>-->
+<!--                                        </div>-->
+<!--                                        <span class="transaction-opration"><i class="fa fa-arrow-left complete"></i></span>-->
+<!--                                        <div class="transaction-info">-->
+<!--                                            <img alt="" src="data/profile/profile-crm.jpg" class="img-responsive img-circle">-->
+<!--                                            <strong><span>OxsD1..</span></strong>-->
+<!--                                        </div>-->
+
+<!--                                        <hr>-->
+
+<!--                                        <div class="col-xs-12">-->
+<!--                                            <a href="index-trading-view.html" class="all-transaction text-center block"><strong><i class="fa fa-plus"></i> 更多交易</strong></a>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </section>-->
+<!--                </div>-->
+
+                <div class="col-lg-4">
+                    <section class="box has-border-left-3">
+                        <header class="panel_header">
+                            <h2 class="title pull-left">平台合约地址</h2>
+                            <div class="actions panel_actions pull-right">
+                                <a class="box_toggle fa fa-chevron-down"></a>
+                                <a class="box_close fa fa-times"></a>
+                            </div>
+                        </header>
+                        <div class="content-body">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="transfer-wraper">
+                                        <div class="form-group no-mb">
+
+                                            <label class="form-label">资源池合约地址</label>
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                        <span class="arrow"></span>
+                                                <img src="data/icons/backup.png" alt="icon">
+                                                </span>
+                                                <input id="title_resaddr" type="text" class="form-control" placeholder="0xsD12F32xvW3deG5...">
+                                            </div>
+
+                                            <label class="form-label">账户合约地址</label>
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                        <span class="arrow"></span>
+                                                <img src="data/icons/backup.png" alt="icon">
+                                                </span>
+                                                <input id="title_useraddr" type="text" class="form-control" placeholder="0xsD12F32xvW3deG5...">
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="clearfix"></div>
+
+<!--                <div class="col-lg-4">-->
+<!--                    <section class="box ">-->
+<!--                        <header class="panel_header">-->
+<!--                            <h2 class="title pull-left">Safe deals</h2>-->
+<!--                            <div class="actions panel_actions pull-right">-->
+<!--                                <a class="box_toggle fa fa-chevron-down"></a>-->
+<!--                                <a class="box_setting fa fa-cog" data-toggle="modal" href="#section-settings"></a>-->
+<!--                                <a class="box_close fa fa-times"></a>-->
+<!--                            </div>-->
+<!--                        </header>-->
+<!--                        <div class="content-body">-->
+<!--                            <div class="row">-->
+<!--                                <div class="col-xs-12">-->
+<!--                                    <div id="morris_donut_graph"></div>-->
+<!--                                </div>-->
+<!--                                <div class="col-xs-12">-->
+<!--                                    <div class="statistics-wraper">-->
+<!--                                        <div class="statistics-info">-->
+<!--                                            <h3 class="mb"> 5.6307173 BTC</h3>-->
+<!--                                            <span><i class="fa fa-dot-circle-o active"></i> 6 active deals</span>-->
+<!--                                        </div>-->
+<!--                                        <div class="statistics-info no-pb">-->
+<!--                                            <h3 class="mb"> 16.453671 BTC</h3>-->
+<!--                                            <span><i class="fa fa-dot-circle-o"></i> 20 unconfirmed deals</span>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </section>-->
+<!--                </div>-->
+
+                <div class="clearfix"></div>
+
+                <!-- MAIN CONTENT AREA ENDS -->
+            </div>
+        </section>
+        <!-- END CONTENT -->
+        <div class="page-chatapi hideit">
+
+            <div class="search-bar">
+                <input type="text" placeholder="Search" class="form-control">
+            </div>
+
+            <div class="chat-wrapper">
+
+                <h4 class="group-head">Favourites</h4>
+                <ul class="contact-list">
+
+                    <li class="user-row " id='chat_user_1' data-user-id='1'>
+                        <div class="user-img">
+                            <a href="#"><img src="data/profile/avatar-1.png" alt=""></a>
+                        </div>
+                        <div class="user-info">
+                            <h4><a href="#">Joge Lucky</a></h4>
+                            <span class="status available" data-status="available"> Available</span>
+                        </div>
+                        <div class="user-status available">
+                            <i class="fa fa-circle"></i>
+                        </div>
+                    </li>
+                    <li class="user-row " id='chat_user_2' data-user-id='2'>
+                        <div class="user-img">
+                            <a href="#"><img src="data/profile/avatar-2.png" alt=""></a>
+                        </div>
+                        <div class="user-info">
+                            <h4><a href="#">Folisise Chosiel</a></h4>
+                            <span class="status away" data-status="away"> Away</span>
+                        </div>
+                        <div class="user-status away">
+                            <i class="fa fa-circle"></i>
+                        </div>
+                    </li>
+                    <li class="user-row " id='chat_user_3' data-user-id='3'>
+                        <div class="user-img">
+                            <a href="#"><img src="data/profile/avatar-3.png" alt=""></a>
+                        </div>
+                        <div class="user-info">
+                            <h4><a href="#">Aron Gonzalez</a></h4>
+                            <span class="status busy" data-status="busy"> Busy</span>
+                        </div>
+                        <div class="user-status busy">
+                            <i class="fa fa-circle"></i>
+                        </div>
+                    </li>
+
+                </ul>
+
+                <h4 class="group-head">More Contacts</h4>
+                <ul class="contact-list">
+
+                    <li class="user-row " id='chat_user_4' data-user-id='4'>
+                        <div class="user-img">
+                            <a href="#"><img src="data/profile/avatar-4.png" alt=""></a>
+                        </div>
+                        <div class="user-info">
+                            <h4><a href="#">Chris Fox</a></h4>
+                            <span class="status offline" data-status="offline"> Offline</span>
+                        </div>
+                        <div class="user-status offline">
+                            <i class="fa fa-circle"></i>
+                        </div>
+                    </li>
+                    <li class="user-row " id='chat_user_5' data-user-id='5'>
+                        <div class="user-img">
+                            <a href="#"><img src="data/profile/avatar-5.png" alt=""></a>
+                        </div>
+                        <div class="user-info">
+                            <h4><a href="#">Mogen Polish</a></h4>
+                            <span class="status offline" data-status="offline"> Offline</span>
+                        </div>
+                        <div class="user-status offline">
+                            <i class="fa fa-circle"></i>
+                        </div>
+                    </li>
+                    <li class="user-row " id='chat_user_6' data-user-id='6'>
+                        <div class="user-img">
+                            <a href="#"><img src="data/profile/avatar-1.png" alt=""></a>
+                        </div>
+                        <div class="user-info">
+                            <h4><a href="#">Smith Carter</a></h4>
+                            <span class="status available" data-status="available"> Available</span>
+                        </div>
+                        <div class="user-status available">
+                            <i class="fa fa-circle"></i>
+                        </div>
+                    </li>
+                    <li class="user-row " id='chat_user_7' data-user-id='7'>
+                        <div class="user-img">
+                            <a href="#"><img src="data/profile/avatar-2.png" alt=""></a>
+                        </div>
+                        <div class="user-info">
+                            <h4><a href="#">Amilia Gozenal</a></h4>
+                            <span class="status busy" data-status="busy"> Busy</span>
+                        </div>
+                        <div class="user-status busy">
+                            <i class="fa fa-circle"></i>
+                        </div>
+                    </li>
+                    <li class="user-row " id='chat_user_8' data-user-id='8'>
+                        <div class="user-img">
+                            <a href="#"><img src="data/profile/avatar-3.png" alt=""></a>
+                        </div>
+                        <div class="user-info">
+                            <h4><a href="#">Tahir Jemyship</a></h4>
+                            <span class="status away" data-status="away"> Away</span>
+                        </div>
+                        <div class="user-status away">
+                            <i class="fa fa-circle"></i>
+                        </div>
+                    </li>
+                    <li class="user-row " id='chat_user_9' data-user-id='9'>
+                        <div class="user-img">
+                            <a href="#"><img src="data/profile/avatar-4.png" alt=""></a>
+                        </div>
+                        <div class="user-info">
+                            <h4><a href="#">Johanson Wright</a></h4>
+                            <span class="status busy" data-status="busy"> Busy</span>
+                        </div>
+                        <div class="user-status busy">
+                            <i class="fa fa-circle"></i>
+                        </div>
+                    </li>
+                    <li class="user-row " id='chat_user_10' data-user-id='10'>
+                        <div class="user-img">
+                            <a href="#"><img src="data/profile/avatar-5.png" alt=""></a>
+                        </div>
+                        <div class="user-info">
+                            <h4><a href="#">Loni Tindall</a></h4>
+                            <span class="status away" data-status="away"> Away</span>
+                        </div>
+                        <div class="user-status away">
+                            <i class="fa fa-circle"></i>
+                        </div>
+                    </li>
+                    <li class="user-row " id='chat_user_11' data-user-id='11'>
+                        <div class="user-img">
+                            <a href="#"><img src="data/profile/avatar-1.png" alt=""></a>
+                        </div>
+                        <div class="user-info">
+                            <h4><a href="#">Natcho Herlaey</a></h4>
+                            <span class="status idle" data-status="idle"> Idle</span>
+                        </div>
+                        <div class="user-status idle">
+                            <i class="fa fa-circle"></i>
+                        </div>
+                    </li>
+                    <li class="user-row " id='chat_user_12' data-user-id='12'>
+                        <div class="user-img">
+                            <a href="#"><img src="data/profile/avatar-2.png" alt=""></a>
+                        </div>
+                        <div class="user-info">
+                            <h4><a href="#">Shakira Swedan</a></h4>
+                            <span class="status idle" data-status="idle"> Idle</span>
+                        </div>
+                        <div class="user-status idle">
+                            <i class="fa fa-circle"></i>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="chatapi-windows ">
+
+        </div>
+    </div>
+    <!-- END CONTAINER -->
+    <!-- LOAD FILES AT PAGE END FOR FASTER LOADING -->
+
+    <script lang="javascript">
+        var setCookie = function (name, value, day) {
+            var expires = day * 24 * 60 * 60 * 1000;
+            var exp = new Date();
+            exp.setTime(exp.getTime() + expires);
+            document.cookie = name + "=" + value + ";expires=" + exp.toUTCString();
+        };
+
+        var delCookie = function (name) {
+            setCookie(name, ' ', -1);
+        };
+
+        function deletecookie() {
+            delCookie('nickname',' ',-1)
+            delCookie('userid',' ',-1)
+            delCookie('password',' ',-1)
+        }
+
+        function logout() {
+            deletecookie();
+            location.reload();
+        }
+
+        var getCookie = function (name) {
+            var arr;
+            var reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+            if (arr = document.cookie.match(reg)){
+                return arr[2];
+            }
+            else
+                return null;
+        };
+    </script>
+
+    <script lang="javascript">
+        var nickname = "";
+        var password = "";
+        var userid = "";
+
+        // Get Cookies
+        nickname = getCookie("nickname");
+        userid = getCookie("userid");
+        password = getCookie("password");
+        if (nickname === "" || nickname === null)
+            document.location = "ui-login.html";
+        else
+            $("#title_nickname").html(nickname + "  <i class=\"fa fa-angle-down\"></i>");
+    </script>
+
+    <script lang="javascript">
+        get('blockNumber', function (retcode, data) {
+            if(retcode===0) {
+                document.getElementById('blockNumber').innerHTML = data.block_number;
+            }
+        });
+
+        get('ping', function (retcode, data) {
+            if(retcode===0) {
+                document.getElementById('label_bchealth').innerHTML = "正常";
+            } else {
+                document.getElementById('label_bchealth').innerHTML = "异常";
+            }
+        });
+
+        get('userContractAddress', function (retcode, data) {
+            if(retcode===0) {
+                $('#title_useraddr').val(data.user_management_contract_address);
+            }
+        });
+
+        get('resourceContractAddress', function (retcode, data) {
+            if(retcode===0) {
+                $('#title_resaddr').val(data.resource_pool_contract_address);
+            }
+        });
+
+        // initialize private information
+        var form_data = new FormData();
+        form_data.append('userID', userid);
+        post('balanceByID', form_data, function (retcode, data) {
+            if(retcode===0) {
+                $("#title_balance").html(data.balance + " CNY");
+            }
+        });
+
+        $('#btn_transfer').click(function (){
+            var form_data = new FormData();
+            form_data.append('from', userid);
+            form_data.append('to', $('#input_toid').val());
+            form_data.append('amount', $('#input_amount').val());
+            post('transfer', form_data, function (retcode, data) {
+                if(retcode===0) {
+                    alert("转账成功");
+                    location.reload();
+                }
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>
