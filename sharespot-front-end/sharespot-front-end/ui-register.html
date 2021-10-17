@@ -1,0 +1,197 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- 
+        * @Package:  ShareSpot
+        * @Version: 7.0.0
+        * @Time: 10.16-2320
+    -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>ShareSpot</title>
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon" />
+    <!-- For iPhone -->
+    <link rel="apple-touch-icon-precomposed" href="assets/images/apple-touch-icon-57-precomposed.png">
+    <!-- For iPhone 4 Retina display -->
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/images/apple-touch-icon-114-precomposed.png">
+    <!-- For iPad -->
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/images/apple-touch-icon-72-precomposed.png">
+    <!-- For iPad Retina display -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/images/apple-touch-icon-144-precomposed.png">
+
+    <!-- CORE CSS FRAMEWORK - START -->
+    <link href="assets/plugins/pace/pace-theme-flash.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/plugins/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/fonts/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/animate.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/plugins/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" type="text/css" />
+    <!-- CORE CSS FRAMEWORK - END -->
+
+    <!-- HEADER SCRIPTS INCLUDED ON THIS PAGE - START -->
+
+    <link href="assets/plugins/icheck/skins/all.css" rel="stylesheet" type="text/css" media="screen" />
+
+    <!-- HEADER SCRIPTS INCLUDED ON THIS PAGE - END -->
+
+    <!-- CORE CSS TEMPLATE - START -->
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="https://tokrix.netlify.app/assets/css/responsive.css" rel="stylesheet" type="text/css" />
+    <!-- CORE CSS TEMPLATE - END -->
+
+    <!-- CORE JS FRAMEWORK - START -->
+    <script src="assets/js/jquery-1.11.2.min.js"></script>
+    <script src="assets/js/jquery.easing.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/plugins/pace/pace.min.js"></script>
+    <script src="assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="assets/plugins/viewport/viewportchecker.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="assets/js/jquery-1.11.2.min.js"><\/script>');
+    </script>
+    <!-- CORE JS FRAMEWORK - END -->
+
+    <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - START -->
+
+    <script src="assets/plugins/icheck/icheck.min.js"></script>
+    <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - END -->
+
+    <!-- CORE TEMPLATE JS - START -->
+    <script src="assets/js/scripts.js"></script>
+    <script src="js/middleware.js"></script>
+    <script src="js/md5.js"></script>
+
+    <!-- END CORE TEMPLATE JS - END -->
+
+</head>
+<!-- END HEAD -->
+
+<!-- BEGIN BODY -->
+
+<body class=" login_page">
+
+    <div class="container-fluid">
+        <div class="login-wrapper row">
+            <div id="login" class="login loginpage col-lg-offset-2 col-md-offset-3 col-sm-offset-3 col-xs-offset-0 col-xs-12 col-sm-6 col-lg-8">    
+                <div class="login-form-header">
+                     <img src="data/icons/signup.png" alt="login-icon" style="max-width:64px">
+                     <div class="login-header">
+                         <h4 class="bold color-white">立刻注册</h4>
+                         <h4><small>注册新的账号</small></h4>
+                     </div>
+                </div>
+               
+                <div class="box login">
+
+                    <div class="content-body" style="padding-top:30px">
+
+                        <form id="msg_validate" action="#" novalidate="novalidate" class="no-mb no-mt">
+                            <div class="row">
+                                <div class="col-xs-12">
+
+                                    <div class="form-group">
+                                        <h4><small id="hint" style="color: red"></small></h4>
+                                    </div>
+
+                                    <div class="col-lg-6 no-pl">
+                                        <div class="form-group">
+                                            <label class="form-label">用户ID UserID</label>
+                                            <div class="controls">
+                                                <input id="input_userid" type="text" class="form-control" name="formfield2" placeholder="请输入您的用户名">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 no-pr">
+                                        <div class="form-group">
+                                            <label class="form-label">昵称 Nickname</label>
+                                            <div class="controls">
+                                                <input id="input_nickname" type="text" class="form-control" name="formfield1" placeholder="请输入您的昵称">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 no-pl">
+                                        <div class="form-group">
+                                            <label class="form-label">密码 Password</label>
+                                            <div class="controls">
+                                                <input id="input_pwd" type="password" class="form-control" name="formfield2" placeholder="请输入您的密码">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 no-pr">
+                                        <div class="form-group">
+                                            <label class="form-label">确认密码 Confirm Password</label>
+                                            <div class="controls">
+                                                <input id="input_conpwd" type="password" class="form-control" name="formfield1" placeholder="再次输入您的密码">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 no-pl">
+                                        <div class="form-group">
+                                            <label class="form-label">公钥 Public Key</label>
+                                            <div class="controls">
+                                                <input id="input_pk" class="form-control" name="formfield2" placeholder="0x123456...">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="pull-left">
+                                <a id="btn_reg" class="btn btn-primary mt-10 btn-corner left-15">注册</a>
+                                <!--<a href="ui-login.html" class="btn mt-10 btn-corner signup">登录</a>-->
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <p id="nav">
+                    <a class="pull-right" href="ui-login.html">返回登录</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT AREA ENDS -->
+    <!-- LOAD FILES AT PAGE END FOR FASTER LOADING -->
+
+    <script lang="javascript">
+        
+        $("#btn_reg").click(function () {
+            var userid = $("#input_userid").val();
+            var nickname = $("#input_nickname").val();
+            var password = $("#input_pwd").val();
+            var password_confirm = $("#input_conpwd").val();
+            var userpk = $("#input_pk").val();
+            if (userid === "" || nickname === "" || password === "" || password_confirm === "" || userpk === ""){
+                $("#hint").html("请确认信息填写完整");
+            } else if (password_confirm !== password) {
+                $("#hint").html("两次密码输入不一致，请检查");
+            } else {
+                var form_data = new FormData();
+                form_data.append('userID', userid);
+                form_data.append('userPubKey', userpk);
+                form_data.append('name', nickname);
+                form_data.append('passwordEncoded', md5(password));
+                post('user', form_data, function (retcode, data) {
+                    if (retcode === 0) {
+                        $("#hint").html("注册成功！");
+                        location.href = "ui-login.html";
+                    }
+                });
+
+            }
+        });
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- 
+        * @Package:  B-RAN
+        * @Version: 5.0.0
+        * @Time: 9.6-1110
+    -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>ShareSpot</title>
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon" />
+    <!-- For iPhone -->
+    <link rel="apple-touch-icon-precomposed" href="assets/images/apple-touch-icon-57-precomposed.png">
+    <!-- For iPhone 4 Retina display -->
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/images/apple-touch-icon-114-precomposed.png">
+    <!-- For iPad -->
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/images/apple-touch-icon-72-precomposed.png">
+    <!-- For iPad Retina display -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/images/apple-touch-icon-144-precomposed.png">
+
+    <!-- CORE CSS FRAMEWORK - START -->
+    <link href="assets/plugins/pace/pace-theme-flash.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/plugins/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/fonts/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css" />
+    <link href="assets/fonts/webfont/cryptocoins.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/animate.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/plugins/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" type="text/css" />
+    <!-- CORE CSS FRAMEWORK - END -->
+
+    <!-- HEADER SCRIPTS INCLUDED ON THIS PAGE - START -->
+
+    <link href="assets/plugins/jvectormap/jquery-jvectormap-2.0.1.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="assets/plugins/morris-chart/css/morris.css" rel="stylesheet" type="text/css" media="screen" />
+
+    <!-- HEADER SCRIPTS INCLUDED ON THIS PAGE - END -->
+
+    <!-- CORE CSS TEMPLATE - START -->
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="https://tokrix.netlify.app/assets/css/responsive.css" rel="stylesheet" type="text/css" />
+    <!-- CORE CSS TEMPLATE - END -->
+    <script src="js/middleware.js"></script>
+
+</head>
+<!-- END HEAD -->
+
+<!-- BEGIN BODY -->
+
+<body class=" ">
+    <!-- START TOPBAR -->
+    <div class='page-topbar '>
+        <div class='logo-area'>
+
+        </div>
+        <div class='quick-area'>
+            <div class='pull-left'>
+                <ul class="info-menu left-links list-inline list-unstyled">
+                    <li class="sidebar-toggle-wrap">
+                        <a href="#" data-toggle="sidebar" class="sidebar_toggle">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </li>
+<!--                    <li class="notify-toggle-wrapper">-->
+<!--                        <a href="#" data-toggle="dropdown" class="toggle">-->
+<!--                            <i class="fa fa-bell"></i>-->
+<!--                            <span class="badge badge-accent">3</span>-->
+<!--                        </a>-->
+<!--                        <ul class="dropdown-menu notifications animated fadeIn">-->
+<!--                            <li class="total">-->
+<!--                                <span class="small">-->
+<!--                                您有<strong>3</strong>条新通知-->
+<!--                                <a href="javascript:;" class="pull-right">标记所有消息为已读</a>-->
+<!--                            </span>-->
+<!--                            </li>-->
+<!--                            <li class="list">-->
+
+<!--                                <ul class="dropdown-menu-list list-unstyled ps-scrollbar">-->
+<!--                                    <li class="unread available">-->
+<!--                                        &lt;!&ndash; available: success, warning, info, error &ndash;&gt;-->
+<!--                                        <a href="javascript:;">-->
+<!--                                            <div class="notice-icon">-->
+<!--                                                <i class="fa fa-check"></i>-->
+<!--                                            </div>-->
+<!--                                            <div>-->
+<!--                                                <span class="name">-->
+<!--                                                    <strong>成功交易1CNY</strong>-->
+<!--                                                    <span class="time small">15分钟前</span>-->
+<!--                                                </span>-->
+<!--                                            </div>-->
+<!--                                        </a>-->
+<!--                                    </li>-->
+<!--                                    <li class="unread away">-->
+<!--                                        &lt;!&ndash; available: success, warning, info, error &ndash;&gt;-->
+<!--                                        <a href="javascript:;">-->
+<!--                                            <div class="notice-icon">-->
+<!--                                                <i class="fa fa-clock-o"></i>-->
+<!--                                            </div>-->
+<!--                                            <div>-->
+<!--                                                <span class="name">-->
+<!--                                                    <strong>4个交易待打包</strong>-->
+<!--                                                    <span class="time small">45分钟前</span>-->
+<!--                                                </span>-->
+<!--                                            </div>-->
+<!--                                        </a>-->
+<!--                                    </li>-->
+<!--                                    <li class=" busy">-->
+<!--                                        &lt;!&ndash; available: success, warning, info, error &ndash;&gt;-->
+<!--                                        <a href="javascript:;">-->
+<!--                                            <div class="notice-icon">-->
+<!--                                                <i class="fa fa-times"></i>-->
+<!--                                            </div>-->
+<!--                                            <div>-->
+<!--                                                <span class="name">-->
+<!--                                                    <strong>取消1个交易</strong>-->
+<!--                                                    <span class="time small">1小时前</span>-->
+<!--                                                </span>-->
+<!--                                            </div>-->
+<!--                                        </a>-->
+<!--                                    </li>-->
+<!--                                   -->
+<!--                                    <li class=" available">-->
+<!--                                        &lt;!&ndash; available: success, warning, info, error &ndash;&gt;-->
+<!--                                        <a href="javascript:;">-->
+<!--                                            <div class="notice-icon">-->
+<!--                                                <i class="fa fa-check"></i>-->
+<!--                                            </div>-->
+<!--                                            <div>-->
+<!--                                                <span class="name">-->
+<!--                                                    <strong>成功交易2CNY</strong>-->
+<!--                                                    <span class="time small">3月14日</span>-->
+<!--                                                </span>-->
+<!--                                            </div>-->
+<!--                                        </a>-->
+<!--                                    </li>-->
+
+<!--                                </ul>-->
+
+<!--                            </li>-->
+
+<!--&lt;!&ndash;                            <li class="external">&ndash;&gt;-->
+<!--&lt;!&ndash;                                <a href="javascript:;">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <span>Read All Notifications</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                                </a>&ndash;&gt;-->
+<!--&lt;!&ndash;                            </li>&ndash;&gt;-->
+<!--                        </ul>-->
+<!--                    </li>-->
+                    <li class="hidden-sm hidden-xs searchform">
+                        <form action="#" method="post">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                <i class="fa fa-search"></i>
+                            </span>
+                                <input type="text" class="form-control animated fadeIn" placeholder="搜索">
+                            </div>
+                            <input type='submit' value="">
+                        </form>
+                    </li>
+                </ul>
+            </div>
+            <div class='pull-right'>
+                <ul class="info-menu right-links list-inline list-unstyled">
+                    <li class="profile">
+                        <a href="#" data-toggle="dropdown" class="toggle">
+                            <img src="data/profile/profile-crm.jpg" alt="user-image" class="img-circle img-inline">
+                            <span id="title_nickname">Jiaheng Wang <i class="fa fa-angle-down"></i></span>
+                        </a>
+                        <ul class="dropdown-menu profile animated fadeIn">
+                            <li>
+                                <a href="account-confirmation.html">
+                                    <i class="fa fa-wrench"></i> 设置
+                                </a>
+                            </li>
+                            <li>
+                                <a href="ui-support.html">
+                                    <i class="fa fa-info"></i> 帮助
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:logout();">
+                                    <i class="fa fa-lock"></i> 退出登录
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+<!--                    <li class="chat-toggle-wrapper">-->
+<!--                        <a href="#" data-toggle="chatbar" class="toggle_chat">-->
+<!--                            <i class="fa fa-comments"></i>-->
+<!--                            <span class="badge badge-accent">9</span>-->
+<!--                            <i class="fa fa-times"></i>-->
+<!--                        </a>-->
+<!--                    </li>-->
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <!-- END TOPBAR -->
+    <!-- START CONTAINER -->
+    <div class="page-container row-fluid container-fluid">
+
+        <!-- SIDEBAR - START -->
+
+        <div class="page-sidebar fixedscroll">
+
+            <!-- MAIN MENU - START -->
+            <div class="page-sidebar-wrapper" id="main-menu-wrapper">
+
+
+                <ul class='wraplist'>
+<!--                    <li class='menusection'>我的</li>-->
+                    <li class="">
+                        <a href="index-dashboard.html">
+                            <i class="fa fa-th-large"></i>
+                            <span class="title">概览</span>
+                        </a>
+                    </li>
+
+
+                    <li class="">
+                        <a href="javascript:;">
+                            <i class="fa fa-exchange"></i>
+                            <span class="title">资源共享/交易</span>
+                            <span class="arrow "></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a class="" href="buying.html">购买</a>
+                            </li>
+                            <li>
+                                <a class="" href="selling.html">出售</a>
+                            </li>
+                            <li>
+                                <a class="" href="sharing.html">授权</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="open">
+                        <a href="security.html">
+                            <i class="fa fa-lock"></i>
+                            <span class="title">安全</span>
+                        </a>
+                    </li>
+
+                    <li class="">
+                        <a href="javascript:;">
+                            <i class="fa fa-gear"></i>
+                            <span class="title">设置</span>
+                            <span class="arrow "></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a class="" href="settings.html">通用</a>
+                            </li>
+                            <li>
+                                <a class="" href="account-confirmation.html">账户认证</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="javascript:;">
+                            <i class="fa fa-question-circle"></i>
+                            <span class="title">技术支持</span>
+                            <span class="arrow "></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a class="" href="ui-faq.html">常见问题</a>
+                            </li>
+                            <li>
+                                <a class="" href="ui-support.html">帮助中心</a>
+                            </li>
+                        </ul>
+                    </li>                  
+                </ul>
+
+            </div>
+            <!-- MAIN MENU - END -->
+
+        </div>
+        <!--  SIDEBAR - END -->
+
+        <!-- START CONTENT -->
+        <div id="main-content" class=" ">
+            <section class="wrapper main-wrapper row" style=''>
+
+                <div class='col-xs-12'>
+                    <div class="page-title">
+
+                        <div class="pull-left">
+                            <!-- PAGE HEADING TAG - START -->
+                            <h1 class="title">安全</h1>
+                            <!-- PAGE HEADING TAG - END -->
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="col-xs-12">
+                    <section class="box over-h">
+                        <div class="content-body">    
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="col-lg-6">
+                                        <div class="left-col">
+                                            <h2 class="mt-20"><small>我的账户</small></h2>
+                                            <div class="col-lg-12 col-xs-12 no-pl mt-10">
+                                                <a href="buying.html" class="btn btn-primary btn-corner right15"><i class="fa fa-long-arrow-down complete color-white"></i>购买资源</a>
+                                            
+                                                <a href="selling.html" class="btn btn-primary btn-corner right15" ><i class="fa fa-long-arrow-up complete color-white"></i>提供资源</a>
+
+                                                <a href="sharing.html" class="btn btn-primary btn-corner right15"><i class="fa fa-copy complete color-white"></i>共享资源</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="right-col">
+<!--                                            <a href="#" class="btn btn-primary btn-corner right15">-->
+                                            <h3 class="mt-20"><small id="title_userid">OxF32xvW3sD12deG5...</small></h3>
+                                            <div class="right-col">
+                                                <div class="btc-balance" id="title_balance">
+                                                    <h3 class=""><i class="fa fa-cny fa-5x"></i>195.39 CNY</h3>
+                                                </div>
+                                            </div>
+                                        <!--
+                                            <div class="col-sm-6 no-pl">
+                                                <div class="btc-balance">
+                                                    <h3 class=""><i class="cc LTC color-primary"></i>30.14 CNY</h3>
+                                                </div>
+                                            </div>
+                                        -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="clearfix"></div>
+
+                <div class="col-lg-12">
+                    <section class="box has-border-left-3">
+                            <header class="panel_header">
+                                <h2 class="title pull-left">安全系统</h2>
+                            </header>
+                            <div class="content-body">    
+                                <div class="row">
+                                    <div class="tabs-wrapper">
+                                        <ul class="nav nav-tabs">
+                                            <li class="active col-lg-4">
+                                                <a href="#home-1" data-toggle="tab">
+                                                    <img src="data/icons/sec-level1.png" class="tab-img-icon" alt="icon">
+                                                    <div class="tab-head">
+                                                        <h4 class="bold mb-5">Level 1</h4>
+                                                        <h4 class="no-mt"><small>防止您的资产使用权丢失</small></h4>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="col-lg-4">
+                                                <a href="#level-2" data-toggle="tab">
+                                                    <img src="data/icons/sec-level2.png" class="tab-img-icon" alt="icon">
+                                                    <div class="tab-head">
+                                                        <h4 class="bold mb-5">Level 2</h4>
+                                                        <h4 class="no-mt"><small>防止未经授权访问您的账户钱包</small></h4>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="col-lg-4">
+                                                <a href="#level-3" data-toggle="tab">
+                                                    <img src="data/icons/sec-level3.png" class="tab-img-icon" alt="icon">
+                                                    <div class="tab-head">
+                                                        <h4 class="bold mb-5">Level 3</h4>
+                                                        <h4 class="no-mt"><small>账户的高级安全选项</small></h4>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            
+                                        </ul>
+
+                                        <div class="tab-content">
+                                            <div class="tab-pane fade in active" id="home-1">
+
+                                                <ul class="list-unstyled">
+                                                    <li class="">
+                                                        <div class="security-option-wrapper">
+                                                            <img src="data/icons/email-verification.png" class="tab-img-icon" alt="icon">
+                                                            <div class="tab-head">
+                                                                <h4 class="bold mb-5">邮箱验证</h4>
+                                                                <h4 class="no-mt"><small>使用验证过的邮箱进行登陆，还可以用来接收安全提示邮件。</small></h4>
+
+                                                                <h5 class="bold no-mb"><i class="fa fa-check-circle-o complete f-s-14"></i> 已验证</h5>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="">
+                                                        <div class="security-option-wrapper">
+                                                            <img src="data/icons/backup.png" class="tab-img-icon" alt="icon">
+                                                            <div class="tab-head">
+                                                                <h4 class="bold mb-5">设置备份恢复</h4>
+                                                                <h4 class="no-mt"><small>用于账户安全信息备份。</small></h4>
+
+                                                                <a href="buy-and-sell.html" class="btn btn-primary btn-corner right15"><i class="fa fa-cloud-download complete color-white"></i>立即备份</a>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="">
+                                                        <div class="security-option-wrapper">
+                                                            <img src="data/icons/pass-hint.png" class="tab-img-icon" alt="icon">
+                                                            <div class="tab-head">
+                                                                <h4 class="bold mb-5">设置密码提示</h4>
+                                                                <h4 class="no-mt"><small>用于忘记密码时的提示，建议与密码有一定关联性的提示。</small></h4>
+
+                                                                <div class="form-group mb-10">
+                                                                    <div class="input-group">
+                                                                        <input type="text" class="form-control bg-white" id="field-13" placeholder="密码提示" style="width:100%">
+                                                                    </div>
+                                                                </div>
+
+                                                                 <a href="buy-and-sell.html" class="btn btn-primary btn-corner right15"><i class="fa fa-cloud-download complete color-white"></i>保存</a>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+
+                                            </div>
+                                            <div class="tab-pane fade" id="level-2">
+
+                                                <ul class="list-unstyled">
+                                                    <li class="">
+                                                        <div class="security-option-wrapper">
+                                                            <img src="data/icons/email-verification.png" class="tab-img-icon" alt="icon">
+                                                            <div class="tab-head">
+                                                                <h4 class="bold mb-5">邮箱验证</h4>
+                                                                <h4 class="no-mt"><small>使用验证过的邮箱进行登陆，还可以用来接收安全提示邮件。</small></h4>
+
+                                                                <h5 class="bold no-mb"><i class="fa fa-check-circle-o complete f-s-14"></i> 已验证</h5>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="">
+                                                        <div class="security-option-wrapper">
+                                                            <img src="data/icons/backup.png" class="tab-img-icon" alt="icon">
+                                                            <div class="tab-head">
+                                                                <h4 class="bold mb-5">设置备份恢复</h4>
+                                                                <h4 class="no-mt"><small>用于账户安全信息备份。</small></h4>
+
+                                                                <a href="buy-and-sell.html" class="btn btn-primary btn-corner right15"><i class="fa fa-cloud-download complete color-white"></i>立即备份</a>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="">
+                                                        <div class="security-option-wrapper">
+                                                            <img src="data/icons/pass-hint.png" class="tab-img-icon" alt="icon">
+                                                            <div class="tab-head">
+                                                                <h4 class="bold mb-5">设置密码提示</h4>
+                                                                <h4 class="no-mt"><small>用于忘记密码时的提示，建议与密码有一定关联性的提示。</small></h4>
+
+                                                                <div class="form-group mb-10">
+                                                                    <div class="input-group">
+                                                                        <input type="text" class="form-control bg-white" id="field-13" placeholder="密码提示" style="width:100%">
+                                                                    </div>
+                                                                </div>
+
+                                                                 <a href="buy-and-sell.html" class="btn btn-primary btn-corner right15"><i class="fa fa-cloud-download complete color-white"></i>保存</a>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+
+                                            </div>
+                                            <div class="tab-pane fade" id="level-3">
+
+                                                <ul class="list-unstyled">
+                                                    <li class="">
+                                                        <div class="security-option-wrapper">
+                                                            <img src="data/icons/email-verification.png" class="tab-img-icon" alt="icon">
+                                                            <div class="tab-head">
+                                                                <h4 class="bold mb-5">邮箱验证</h4>
+                                                                <h4 class="no-mt"><small>使用验证过的邮箱进行登陆，还可以用来接收安全提示邮件。</small></h4>
+
+                                                                <h5 class="bold no-mb"><i class="fa fa-check-circle-o complete f-s-14"></i> 已验证</h5>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="">
+                                                        <div class="security-option-wrapper">
+                                                            <img src="data/icons/backup.png" class="tab-img-icon" alt="icon">
+                                                            <div class="tab-head">
+                                                                <h4 class="bold mb-5">设置备份恢复</h4>
+                                                                <h4 class="no-mt"><small>用于账户安全信息备份。</small></h4>
+
+                                                                <a href="buy-and-sell.html" class="btn btn-primary btn-corner right15"><i class="fa fa-cloud-download complete color-white"></i>立即备份</a>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="">
+                                                        <div class="security-option-wrapper">
+                                                            <img src="data/icons/pass-hint.png" class="tab-img-icon" alt="icon">
+                                                            <div class="tab-head">
+                                                                <h4 class="bold mb-5">设置密码提示</h4>
+                                                                <h4 class="no-mt"><small>用于忘记密码时的提示，建议与密码有一定关联性的提示。</small></h4>
+
+                                                                <div class="form-group mb-10">
+                                                                    <div class="input-group">
+                                                                        <input type="text" class="form-control bg-white" id="field-13" placeholder="密码提示" style="width:100%">
+                                                                    </div>
+                                                                </div>
+
+                                                                 <a href="buy-and-sell.html" class="btn btn-primary btn-corner right15"><i class="fa fa-cloud-download complete color-white"></i>保存</a>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+
+                                            </div>
+
+                                            </div>
+
+                                           
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </section>
+                </div>
+
+                <div class="clearfix"></div>
+
+
+                <!-- MAIN CONTENT AREA ENDS -->
+            </section>
+        </div>
+        <!-- END CONTENT -->
+
+                <div class="clearfix"></div>
+
+                <!-- MAIN CONTENT AREA ENDS -->
+            </div>
+        </section>
+        <!-- END CONTENT -->
+        <div class="page-chatapi hideit">
+
+            <div class="search-bar">
+                <input type="text" placeholder="Search" class="form-control">
+            </div>
+
+            <div class="chat-wrapper">
+
+                <h4 class="group-head">Favourites</h4>
+                <ul class="contact-list">
+
+                    <li class="user-row " id='chat_user_1' data-user-id='1'>
+                        <div class="user-img">
+                            <a href="#"><img src="data/profile/avatar-1.png" alt=""></a>
+                        </div>
+                        <div class="user-info">
+                            <h4><a href="#">Joge Lucky</a></h4>
+                            <span class="status available" data-status="available"> Available</span>
+                        </div>
+                        <div class="user-status available">
+                            <i class="fa fa-circle"></i>
+                        </div>
+                    </li>
+                    <li class="user-row " id='chat_user_2' data-user-id='2'>
+                        <div class="user-img">
+                            <a href="#"><img src="data/profile/avatar-2.png" alt=""></a>
+                        </div>
+                        <div class="user-info">
+                            <h4><a href="#">Folisise Chosiel</a></h4>
+                            <span class="status away" data-status="away"> Away</span>
+                        </div>
+                        <div class="user-status away">
+                            <i class="fa fa-circle"></i>
+                        </div>
+                    </li>
+                    <li class="user-row " id='chat_user_3' data-user-id='3'>
+                        <div class="user-img">
+                            <a href="#"><img src="data/profile/avatar-3.png" alt=""></a>
+                        </div>
+                        <div class="user-info">
+                            <h4><a href="#">Aron Gonzalez</a></h4>
+                            <span class="status busy" data-status="busy"> Busy</span>
+                        </div>
+                        <div class="user-status busy">
+                            <i class="fa fa-circle"></i>
+                        </div>
+                    </li>
+
+                </ul>
+
+                <h4 class="group-head">More Contacts</h4>
+                <ul class="contact-list">
+
+                    <li class="user-row " id='chat_user_4' data-user-id='4'>
+                        <div class="user-img">
+                            <a href="#"><img src="data/profile/avatar-4.png" alt=""></a>
+                        </div>
+                        <div class="user-info">
+                            <h4><a href="#">Chris Fox</a></h4>
+                            <span class="status offline" data-status="offline"> Offline</span>
+                        </div>
+                        <div class="user-status offline">
+                            <i class="fa fa-circle"></i>
+                        </div>
+                    </li>
+                    <li class="user-row " id='chat_user_5' data-user-id='5'>
+                        <div class="user-img">
+                            <a href="#"><img src="data/profile/avatar-5.png" alt=""></a>
+                        </div>
+                        <div class="user-info">
+                            <h4><a href="#">Mogen Polish</a></h4>
+                            <span class="status offline" data-status="offline"> Offline</span>
+                        </div>
+                        <div class="user-status offline">
+                            <i class="fa fa-circle"></i>
+                        </div>
+                    </li>
+                    <li class="user-row " id='chat_user_6' data-user-id='6'>
+                        <div class="user-img">
+                            <a href="#"><img src="data/profile/avatar-1.png" alt=""></a>
+                        </div>
+                        <div class="user-info">
+                            <h4><a href="#">Smith Carter</a></h4>
+                            <span class="status available" data-status="available"> Available</span>
+                        </div>
+                        <div class="user-status available">
+                            <i class="fa fa-circle"></i>
+                        </div>
+                    </li>
+                    <li class="user-row " id='chat_user_7' data-user-id='7'>
+                        <div class="user-img">
+                            <a href="#"><img src="data/profile/avatar-2.png" alt=""></a>
+                        </div>
+                        <div class="user-info">
+                            <h4><a href="#">Amilia Gozenal</a></h4>
+                            <span class="status busy" data-status="busy"> Busy</span>
+                        </div>
+                        <div class="user-status busy">
+                            <i class="fa fa-circle"></i>
+                        </div>
+                    </li>
+                    <li class="user-row " id='chat_user_8' data-user-id='8'>
+                        <div class="user-img">
+                            <a href="#"><img src="data/profile/avatar-3.png" alt=""></a>
+                        </div>
+                        <div class="user-info">
+                            <h4><a href="#">Tahir Jemyship</a></h4>
+                            <span class="status away" data-status="away"> Away</span>
+                        </div>
+                        <div class="user-status away">
+                            <i class="fa fa-circle"></i>
+                        </div>
+                    </li>
+                    <li class="user-row " id='chat_user_9' data-user-id='9'>
+                        <div class="user-img">
+                            <a href="#"><img src="data/profile/avatar-4.png" alt=""></a>
+                        </div>
+                        <div class="user-info">
+                            <h4><a href="#">Johanson Wright</a></h4>
+                            <span class="status busy" data-status="busy"> Busy</span>
+                        </div>
+                        <div class="user-status busy">
+                            <i class="fa fa-circle"></i>
+                        </div>
+                    </li>
+                    <li class="user-row " id='chat_user_10' data-user-id='10'>
+                        <div class="user-img">
+                            <a href="#"><img src="data/profile/avatar-5.png" alt=""></a>
+                        </div>
+                        <div class="user-info">
+                            <h4><a href="#">Loni Tindall</a></h4>
+                            <span class="status away" data-status="away"> Away</span>
+                        </div>
+                        <div class="user-status away">
+                            <i class="fa fa-circle"></i>
+                        </div>
+                    </li>
+                    <li class="user-row " id='chat_user_11' data-user-id='11'>
+                        <div class="user-img">
+                            <a href="#"><img src="data/profile/avatar-1.png" alt=""></a>
+                        </div>
+                        <div class="user-info">
+                            <h4><a href="#">Natcho Herlaey</a></h4>
+                            <span class="status idle" data-status="idle"> Idle</span>
+                        </div>
+                        <div class="user-status idle">
+                            <i class="fa fa-circle"></i>
+                        </div>
+                    </li>
+                    <li class="user-row " id='chat_user_12' data-user-id='12'>
+                        <div class="user-img">
+                            <a href="#"><img src="data/profile/avatar-2.png" alt=""></a>
+                        </div>
+                        <div class="user-info">
+                            <h4><a href="#">Shakira Swedan</a></h4>
+                            <span class="status idle" data-status="idle"> Idle</span>
+                        </div>
+                        <div class="user-status idle">
+                            <i class="fa fa-circle"></i>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="chatapi-windows ">
+
+        </div>
+    </div>
+    <!-- END CONTAINER -->
+    <!-- LOAD FILES AT PAGE END FOR FASTER LOADING -->
+
+    <!-- CORE JS FRAMEWORK - START -->
+    <script src="assets/js/jquery-1.11.2.min.js"></script>
+    <script src="assets/js/jquery.easing.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/plugins/pace/pace.min.js"></script>
+    <script src="assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="assets/plugins/viewport/viewportchecker.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="assets/js/jquery-1.11.2.min.js"><\/script>');
+    </script>
+    <!-- CORE JS FRAMEWORK - END -->
+
+    <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - START -->
+
+    <script src="assets/plugins/echarts/echarts-custom-for-dashboard.js"></script>
+
+    <script src="assets/plugins/flot-chart/jquery.flot.js"></script>
+    <script src="assets/plugins/flot-chart/jquery.flot.time.js"></script>
+    <script src="assets/js/chart-flot.js"></script>
+
+    <script src="assets/plugins/morris-chart/js/raphael-min.js"></script>
+    <script src="assets/plugins/morris-chart/js/morris.min.js"></script>
+    <script src="assets/js/chart-morris.js"></script>
+    <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - END -->
+
+    <!-- CORE TEMPLATE JS - START -->
+    <script src="assets/js/scripts.js"></script>
+    <!-- END CORE TEMPLATE JS - END -->
+    <script lang="javascript">
+        var setCookie = function (name, value, day) {
+            var expires = day * 24 * 60 * 60 * 1000;
+            var exp = new Date();
+            exp.setTime(exp.getTime() + expires);
+            document.cookie = name + "=" + value + ";expires=" + exp.toUTCString();
+        };
+
+        var delCookie = function (name) {
+            setCookie(name, ' ', -1);
+        };
+
+        function deletecookie() {
+            delCookie('nickname',' ',-1)
+            delCookie('userid',' ',-1)
+            delCookie('password',' ',-1)
+        }
+
+        function logout() {
+            deletecookie();
+            location.reload();
+        }
+
+        var getCookie = function (name) {
+            var arr;
+            var reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+            if (arr = document.cookie.match(reg)){
+                return arr[2];
+            }
+            else
+                return null;
+        };
+    </script>
+
+    <script lang="javascript">
+        var nickname = "";
+        var password = "";
+        var userid = "";
+
+        // Get Cookies
+        nickname = getCookie("nickname");
+        userid = getCookie("userid");
+        password = getCookie("password");
+        if (nickname === "" || nickname === null)
+            document.location = "ui-login.html";
+        else
+            $("#title_nickname").html(nickname + "  <i class=\"fa fa-angle-down\"></i>");
+
+        var form_data = new FormData();
+        form_data.append('userID', userid);
+        post('balanceByID', form_data, function (retcode, data) {
+            if(retcode===0) {
+                $("#title_balance").html("<h3 class=\"\"><i class=\"fa fa-cny fa-5x\"></i>" + data.balance + " CNY</h3>");
+            }
+        });
+
+        $("#title_userid").html(userid);
+    </script>
+
+</body>
+
+</html>

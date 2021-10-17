@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Page - Sharespot</title>
+
+    <script src="js/jq-3.5.1.js"> </script>
+    <script src="js/middleware.js"> </script>
+</head>
+<body>
+
+<h1>Sharespot项目内部测试环境</h1>
+
+<button id="btn_ping">PING</button>
+
+<button id="btn_blocknumber">获取区块高度</button>
+
+<button id="btn_nodepeers">获取在网节点</button>
+
+<button id="btn_syncstatus">查询群组同步状态</button>
+
+<br><br>
+
+<input id="input_blocknumber" placeholder="输入区块号"/>
+<button id="btn_blockbynumber">根据区块号查询</button>
+
+<button id="btn_tottxcount">查询当前总交易数</button>
+
+<br><br>
+
+<button id="btn_resaddr">查询资源智能合约地址</button>
+
+<button id="btn_getresall">获取当前资源列表</button>
+
+<br><br>
+
+<input id="input_ownerid" placeholder="输入资源所有者id"/> <br>
+<input id="input_servicetype" placeholder="输入资源类型"/> <br>
+<input id="input_servicetime" placeholder="输入资源时长"/> <br>
+<input id="input_price" placeholder="输入售价"/> <br>
+<button id="btn_addres">资源上架</button>
+
+<br><br>
+
+<input id="input_resid" placeholder="输入资源id"/>
+<button id="btn_getres">获取在售资源信息</button>
+
+<br><br>
+
+<input id="input_prebuy_resid" placeholder="输入预购资源id"/>
+<input id="input_prebuy_buyerid" placeholder="输入购买者id"/>
+<button id="btn_prebuyres">预购该资源</button>
+
+<br><br>
+
+<input id="input_auth_resid" placeholder="输入授权资源id"/>
+<input id="input_auth_accesscode" placeholder="输入授权接入码"/>
+<button id="btn_apres">授权该资源</button>
+
+<br><br>
+
+<input id="input_close_resid" placeholder="输入终止资源id"/>
+<button id="btn_finalres">注销该资源</button>
+
+<br><br>
+
+<input id="input_status" placeholder="输入查询资源状态"/>
+<button id="btn_statusget">查询该状态所有资源</button>
+
+<br><br>
+
+<button id="btn_getuseraccountaddr">查询用户合约地址</button>
+
+<button id="btn_getallusers">获取全部用户</button>
+
+<br><br>
+
+<input id="input_userID" placeholder="输入用户id"/> <br>
+<input id="input_userPubKey" placeholder="输入用户公钥"/> <br>
+<input id="input_name" placeholder="输入用户昵称"/> <br>
+<input id="input_passwordEncoded" placeholder="输入加密后密码"/> <br>
+<button id="btn_adduser">新增用户</button>
+
+<br><br>
+
+<input id="input_fromid" placeholder="输入转出用户ID"/>
+<input id="input_toid" placeholder="输入转入用户ID"/>
+<input id="input_amount" placeholder="输入转账总额"/>
+<button id="btn_transfer">确认转账</button>
+
+<br><br>
+
+<input id="input_getbalance_userid" placeholder="输入用户ID"/>
+<button id="btn_getbalance">查询用户余额</button>
+
+<br><br>
+
+<input id="input_getbalance_userpk" placeholder="输入用户PK"/>
+<button id="btn_getbalancebypk">查询用户余额(公钥)</button>
+
+<br><br>
+
+<input id="input_userinfo_userid" placeholder="输入查询用户ID"/>
+<button id="btn_getuserinfo">查询用户</button>
+
+<br><br>
+
+<div id="t"></div>
+
+
+<script lang="javascript">
+    /***
+     * add onClick listener to all buttons
+     ***/
+
+    $('#btn_ping').click(function (){
+        get('ping', function (retcode, data) {
+            if(retcode===0) {
+                document.getElementById('t').innerHTML = retcode;
+            }
+        });
+    });
+
+    $('#btn_blocknumber').click(function (){
+        get('blockNumber', function (retcode, data) {
+            if(retcode===0) {
+                document.getElementById('t').innerHTML = JSON.stringify(data);
+            }
+        });
+    });
+
+    $('#btn_nodepeers').click(function (){
+        get('nodePeers', function (retcode, data) {
+            if(retcode===0) {
+                document.getElementById('t').innerHTML = JSON.stringify(data);
+            }
+        });
+    });
+
+    $('#btn_syncstatus').click(function (){
+        get('syncStatus', function (retcode, data) {
+            if(retcode===0) {
+                document.getElementById('t').innerHTML = JSON.stringify(data);
+            }
+        });
+    });
+
+    $('#btn_blockbynumber').click(function (){
+        var form_data = new FormData();
+        form_data.append('blockNumber', $('#input_blocknumber').val());
+        post('blockByNumber', form_data, function (retcode, data) {
+            if(retcode===0) {
+                document.getElementById('t').innerHTML = JSON.stringify(data);
+            }
+        });
+    });
+
+    $('#btn_tottxcount').click(function (){
+        get('totalTransactionCount', function (retcode, data) {
+            if(retcode===0) {
+                document.getElementById('t').innerHTML = JSON.stringify(data);
+            }
+        });
+    });
+
+    $('#btn_resaddr').click(function (){
+        get('resourceContractAddress', function (retcode, data) {
+            if(retcode===0) {
+                document.getElementById('t').innerHTML = JSON.stringify(data);
+            }
+        });
+    });
+
+    $('#btn_getresall').click(function (){
+        get('allResources', function (retcode, data) {
+            if(retcode===0) {
+                document.getElementById('t').innerHTML = JSON.stringify(data);
+            }
+        });
+    });
+
+    $('#btn_addres').click(function (){
+        var form_data = new FormData();
+        form_data.append('ownerID', $('#input_ownerid').val());
+        form_data.append('serviceType', $('#input_servicetype').val());
+        form_data.append('serviceTime', $('#input_servicetime').val());
+        form_data.append('price', $('#input_price').val());
+        post('resource', form_data, function (retcode, data) {
+            if(retcode===0) {
+                document.getElementById('t').innerHTML = JSON.stringify(data);
+            }
+        });
+    });
+
+    $('#btn_getres').click(function (){
+        var form_data = new FormData();
+        form_data.append('resourceID', $('#input_resid').val());
+        post('resourceByResourceID', form_data, function (retcode, data) {
+            if(retcode===0) {
+                document.getElementById('t').innerHTML = JSON.stringify(data);
+            }
+        });
+    });
+
+    $('#btn_prebuyres').click(function (){
+        var form_data = new FormData();
+        form_data.append('resourceID', $('#input_prebuy_resid').val());
+        form_data.append('buyerID', $('#input_prebuy_buyerid').val());
+        post('resourcePreBuy', form_data, function (retcode, data) {
+            if(retcode===0) {
+                document.getElementById('t').innerHTML = JSON.stringify(data);
+            }
+        });
+    });
+
+    $('#btn_apres').click(function (){
+        var form_data = new FormData();
+        form_data.append('resourceID', $('#input_auth_resid').val());
+        form_data.append('accessCode', $('#input_auth_accesscode').val());
+        post('resourceGrant', form_data, function (retcode, data) {
+            if(retcode===0) {
+                document.getElementById('t').innerHTML = JSON.stringify(data);
+            }
+        });
+    });
+
+    $('#btn_finalres').click(function (){
+        var form_data = new FormData();
+        form_data.append('resourceID', $('#input_close_resid').val());
+        post('resourceFinish', form_data, function (retcode, data) {
+            if(retcode===0) {
+                document.getElementById('t').innerHTML = JSON.stringify(data);
+            }
+        });
+    });
+
+
+    // ForSale,PreBuy,Serving,ServiceFinished
+    $('#btn_statusget').click(function (){
+        var form_data = new FormData();
+        form_data.append('resourceStatus', $('#input_status').val());
+        post('resourceByStatus', form_data, function (retcode, data) {
+            if(retcode===0) {
+                document.getElementById('t').innerHTML = JSON.stringify(data);
+            }
+        });
+    });
+
+    $('#btn_getuseraccountaddr').click(function (){
+        get('userContractAddress', function (retcode, data) {
+            if(retcode===0) {
+                document.getElementById('t').innerHTML = JSON.stringify(data);
+            }
+        });
+    });
+
+
+    $('#btn_getallusers').click(function (){
+        get('allUsers', function (retcode, data) {
+            if(retcode===0) {
+                document.getElementById('t').innerHTML = JSON.stringify(data);
+            }
+        });
+    });
+
+    $('#btn_adduser').click(function (){
+        var form_data = new FormData();
+        form_data.append('userID', $('#input_userID').val());
+        form_data.append('userPubKey', $('#input_userPubKey').val());
+        form_data.append('name', $('#input_name').val());
+        form_data.append('passwordEncoded', $('#input_passwordEncoded').val());
+        post('user', form_data, function (retcode, data) {
+            if(retcode===0) {
+                document.getElementById('t').innerHTML = JSON.stringify(data);
+            }
+        });
+    });
+
+    $('#btn_transfer').click(function (){
+        var form_data = new FormData();
+        form_data.append('from', $('#input_fromid').val());
+        form_data.append('to', $('#input_toid').val());
+        form_data.append('amount', $('#input_amount').val());
+        post('transfer', form_data, function (retcode, data) {
+            if(retcode===0) {
+                document.getElementById('t').innerHTML = JSON.stringify(data);
+            }
+        });
+    });
+
+    $('#btn_getbalance').click(function (){
+        var form_data = new FormData();
+        form_data.append('userID', $('#input_getbalance_userid').val());
+        post('balanceByID', form_data, function (retcode, data) {
+            if(retcode===0) {
+                document.getElementById('t').innerHTML = JSON.stringify(data);
+            }
+        });
+    });
+
+    $('#btn_getbalancebypk').click(function (){
+        var form_data = new FormData();
+        form_data.append('userPubKey', $('#input_getbalance_userpk').val());
+        post('balanceByPubKey', form_data, function (retcode, data) {
+            if(retcode===0) {
+                document.getElementById('t').innerHTML = JSON.stringify(data);
+            }
+        });
+    });
+
+    $('#btn_getuserinfo').click(function (){
+        var form_data = new FormData();
+        form_data.append('userID', $('#input_userinfo_userid').val());
+        post('userByID', form_data, function (retcode, data) {
+            if(retcode===0) {
+                document.getElementById('t').innerHTML = JSON.stringify(data);
+            }
+        });
+    });
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,805 @@
+﻿<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <!-- 
+        * @Package:  Bitcoin & Cryptocurrency trading Dashboard
+        * @Version: 5.0.0
+        * @Time: 9.6-1110
+    --> 
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>ShareSpot</title>
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon" />
+    <!-- For iPhone -->
+    <link rel="apple-touch-icon-precomposed" href="assets/images/apple-touch-icon-57-precomposed.png">
+    <!-- For iPhone 4 Retina display -->
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/images/apple-touch-icon-114-precomposed.png">
+    <!-- For iPad -->
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/images/apple-touch-icon-72-precomposed.png">
+    <!-- For iPad Retina display -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/images/apple-touch-icon-144-precomposed.png">
+
+
+    <!-- CORE CSS FRAMEWORK - START -->
+    <link href="assets/plugins/pace/pace-theme-flash.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/plugins/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/fonts/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css" />
+    <link href="assets/fonts/webfont/cryptocoins.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/animate.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/plugins/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" type="text/css" />
+    <!-- CORE CSS FRAMEWORK - END -->
+
+    <!-- HEADER SCRIPTS INCLUDED ON THIS PAGE - START -->
+    <link href="assets/plugins/icheck/skins/all.css" rel="stylesheet" type="text/css" media="screen">
+    <!-- HEADER SCRIPTS INCLUDED ON THIS PAGE - END -->
+
+
+    <!-- CORE CSS TEMPLATE - START -->
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="https://tokrix.netlify.app/assets/css/responsive.css" rel="stylesheet" type="text/css" />
+    <!-- CORE CSS TEMPLATE - END -->
+
+</head>
+<!-- END HEAD -->
+
+<!-- BEGIN BODY -->
+
+<body class=" ">
+     <!-- START TOPBAR -->
+     <div class='page-topbar '>
+        <div class='logo-area'>
+
+        </div>
+        <div class='quick-area'>
+            <div class='pull-left'>
+                <ul class="info-menu left-links list-inline list-unstyled">
+                    <li class="sidebar-toggle-wrap">
+                        <a href="#" data-toggle="sidebar" class="sidebar_toggle">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </li>
+<!--                    <li class="notify-toggle-wrapper">-->
+<!--                        <a href="#" data-toggle="dropdown" class="toggle">-->
+<!--                            <i class="fa fa-bell"></i>-->
+<!--                            <span class="badge badge-accent">3</span>-->
+<!--                        </a>-->
+<!--                        <ul class="dropdown-menu notifications animated fadeIn">-->
+<!--                            <li class="total">-->
+<!--                                <span class="small">-->
+<!--                                您有<strong>3</strong>条新通知-->
+<!--                                <a href="javascript:;" class="pull-right">标记所有消息为已读</a>-->
+<!--                            </span>-->
+<!--                            </li>-->
+<!--                            <li class="list">-->
+
+<!--                                <ul class="dropdown-menu-list list-unstyled ps-scrollbar">-->
+<!--                                    <li class="unread available">-->
+<!--                                        &lt;!&ndash; available: success, warning, info, error &ndash;&gt;-->
+<!--                                        <a href="javascript:;">-->
+<!--                                            <div class="notice-icon">-->
+<!--                                                <i class="fa fa-check"></i>-->
+<!--                                            </div>-->
+<!--                                            <div>-->
+<!--                                                <span class="name">-->
+<!--                                                    <strong>成功交易1CNY</strong>-->
+<!--                                                    <span class="time small">15分钟前</span>-->
+<!--                                                </span>-->
+<!--                                            </div>-->
+<!--                                        </a>-->
+<!--                                    </li>-->
+<!--                                    <li class="unread away">-->
+<!--                                        &lt;!&ndash; available: success, warning, info, error &ndash;&gt;-->
+<!--                                        <a href="javascript:;">-->
+<!--                                            <div class="notice-icon">-->
+<!--                                                <i class="fa fa-clock-o"></i>-->
+<!--                                            </div>-->
+<!--                                            <div>-->
+<!--                                                <span class="name">-->
+<!--                                                    <strong>4个交易待打包</strong>-->
+<!--                                                    <span class="time small">45分钟前</span>-->
+<!--                                                </span>-->
+<!--                                            </div>-->
+<!--                                        </a>-->
+<!--                                    </li>-->
+<!--                                    <li class=" busy">-->
+<!--                                        &lt;!&ndash; available: success, warning, info, error &ndash;&gt;-->
+<!--                                        <a href="javascript:;">-->
+<!--                                            <div class="notice-icon">-->
+<!--                                                <i class="fa fa-times"></i>-->
+<!--                                            </div>-->
+<!--                                            <div>-->
+<!--                                                <span class="name">-->
+<!--                                                    <strong>取消1个交易</strong>-->
+<!--                                                    <span class="time small">1小时前</span>-->
+<!--                                                </span>-->
+<!--                                            </div>-->
+<!--                                        </a>-->
+<!--                                    </li>-->
+<!--                                   -->
+<!--                                    <li class=" available">-->
+<!--                                        &lt;!&ndash; available: success, warning, info, error &ndash;&gt;-->
+<!--                                        <a href="javascript:;">-->
+<!--                                            <div class="notice-icon">-->
+<!--                                                <i class="fa fa-check"></i>-->
+<!--                                            </div>-->
+<!--                                            <div>-->
+<!--                                                <span class="name">-->
+<!--                                                    <strong>成功交易2CNY</strong>-->
+<!--                                                    <span class="time small">3月14日</span>-->
+<!--                                                </span>-->
+<!--                                            </div>-->
+<!--                                        </a>-->
+<!--                                    </li>-->
+
+<!--                                </ul>-->
+
+<!--                            </li>-->
+
+<!--&lt;!&ndash;                            <li class="external">&ndash;&gt;-->
+<!--&lt;!&ndash;                                <a href="javascript:;">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <span>Read All Notifications</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                                </a>&ndash;&gt;-->
+<!--&lt;!&ndash;                            </li>&ndash;&gt;-->
+<!--                        </ul>-->
+<!--                    </li>-->
+                    <li class="hidden-sm hidden-xs searchform">
+                        <form action="#" method="post">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                <i class="fa fa-search"></i>
+                            </span>
+                                <input type="text" class="form-control animated fadeIn" placeholder="搜索">
+                            </div>
+                            <input type='submit' value="">
+                        </form>
+                    </li>
+                </ul>
+            </div>
+            <div class='pull-right'>
+                <ul class="info-menu right-links list-inline list-unstyled">
+                    <li class="profile">
+                        <a href="#" data-toggle="dropdown" class="toggle">
+                            <img src="data/profile/profile-crm.jpg" alt="user-image" class="img-circle img-inline">
+                            <span id="title_nickname">Jiaheng Wang <i class="fa fa-angle-down"></i></span>
+                        </a>
+                        <ul class="dropdown-menu profile animated fadeIn">
+                            <li>
+                                <a href="account-confirmation.html">
+                                    <i class="fa fa-wrench"></i> 设置
+                                </a>
+                            </li>
+                            <li>
+                                <a href="ui-support.html">
+                                    <i class="fa fa-info"></i> 帮助
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:logout();">
+                                    <i class="fa fa-lock"></i> 退出登录
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+<!--                    <li class="chat-toggle-wrapper">-->
+<!--                        <a href="#" data-toggle="chatbar" class="toggle_chat">-->
+<!--                            <i class="fa fa-comments"></i>-->
+<!--                            <span class="badge badge-accent">9</span>-->
+<!--                            <i class="fa fa-times"></i>-->
+<!--                        </a>-->
+<!--                    </li>-->
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <!-- END TOPBAR -->
+    <!-- START CONTAINER -->
+    <div class="page-container row-fluid container-fluid">
+
+        <!-- SIDEBAR - START -->
+
+        <div class="page-sidebar fixedscroll">
+
+            <!-- MAIN MENU - START -->
+            <div class="page-sidebar-wrapper" id="main-menu-wrapper">
+
+
+                <ul class='wraplist'>
+<!--                    <li class='menusection'>我的</li>-->
+                    <li class="">
+                        <a href="index-dashboard.html">
+                            <i class="fa fa-th-large"></i>
+                            <span class="title">概览</span>
+                        </a>
+                    </li>
+
+                    <!--
+                    <li class="open">
+                        <a href="buy-and-sell.html">
+                            <i class="img">
+                                <img src="data/icons/coins.png" style="width:16px" alt="">
+                            </i>
+                            <span class="title">资源共享/交易</span>
+                        </a>
+                    </li>
+                    -->
+                    <li class="">
+                        <a href="javascript:;">
+                            <i class="fa fa-exchange"></i>
+                            <span class="title">资源共享/交易</span>
+                            <span class="arrow "></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a class="" href="buying.html">购买</a>
+                            </li>
+                            <li>
+                                <a class="" href="selling.html">出售</a>
+                            </li>
+                            <li>
+                                <a class="" href="sharing.html">授权</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="">
+                        <a href="security.html">
+                            <i class="fa fa-lock"></i>
+                            <span class="title">安全</span>
+                        </a>
+                    </li>
+
+                    <li class="">
+                        <a href="javascript:;">
+                            <i class="fa fa-gear"></i>
+                            <span class="title">设置</span>
+                            <span class="arrow "></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a class="" href="settings.html">通用</a>
+                            </li>
+                            <li>
+                                <a class="" href="account-confirmation.html">账户认证</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="open">
+                        <a href="javascript:;">
+                            <i class="fa fa-question-circle"></i>
+                            <span class="title">技术支持</span>
+                            <span class="arrow "></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a class="" href="ui-faq.html">常见问题</a>
+                            </li>
+                            <li>
+                                <a class="active" href="ui-support.html">帮助中心</a>
+                            </li>
+                        </ul>
+                    </li>
+<!--                    Layouts-->
+<!--                    Applications-->
+<!--                    Data Visualization-->
+<!--                    Morris Charts-->
+<!--                    Charts JS-->
+<!--                    Flot Charts-->
+<!--                    Sparkline Charts-->
+<!--                    <li class='menusection'>User Interface</li>-->
+<!--                    Ui Elements-->
+<!--                    Components-->
+<!--                    Appearance-->
+                    
+                </ul>
+
+            </div>
+            <!-- MAIN MENU - END -->
+
+        </div>
+        <!--  SIDEBAR - END -->
+
+
+        <!-- START CONTENT -->
+        <div id="main-content" class=" ">
+            <section class="wrapper main-wrapper row" style=''>
+
+                <div class='col-xs-12'>
+                    <div class="page-title">
+
+                        <div class="pull-left">
+                            <!-- PAGE HEADING TAG - START -->
+                            <h1 class="title">帮助中心</h1>
+                            <!-- PAGE HEADING TAG - END -->
+                        </div>
+
+<!--                        <div class="pull-right hidden-xs">-->
+<!--                            <ol class="breadcrumb">-->
+<!--                                <li>-->
+<!--                                    <a href="index.html"><i class="fa fa-home"></i>首页</a>-->
+<!--                                </li>-->
+<!--                                <li>-->
+<!--                                    <a href="ui-support.html">帮助</a>-->
+<!--                                </li>-->
+<!--                                <li class="active">-->
+<!--                                    <strong>帮助中心</strong>-->
+<!--                                </li>-->
+<!--                            </ol>-->
+<!--                        </div>-->
+
+                    </div>
+                </div>
+
+                <div class="clearfix"></div>
+
+                <div class="col-lg-12 ">
+                    <section class="box nohidden has-border-left-3">
+                            <header class="panel_header">
+                                <h2 class="title pull-left">请选择一个主题</h2>
+                                <div class="actions panel_actions pull-right">
+                                    <a class="box_toggle fa fa-chevron-down"></a>
+                                    <a class="box_setting fa fa-cog" data-toggle="modal" href="#section-settings"></a>
+                                    <a class="box_close fa fa-times"></a>
+                                </div>
+                            </header>
+                            <div class="content-body" style="padding-bottom:0 !important">    
+                                <div class="row">
+                                    <div class="col-lg-4 no-pl no-pr">
+                                        <div class="tile-progress bg-accent" style="margin-left:15px;margin-right:15px;cursor:pointer">
+                                            <div class="content">
+                                                <img src="data/icons/i1.png" class="center-block mb-20" style="max-width:64px" alt="">
+                                                <h4>账户安全</h4>
+                                                <p class="mt-10 text-center no-mb">提供资产信息、用户隐私设置。</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-4 no-pl no-pr">
+                                        <div class="tile-progress bg-accent" style="margin-left:15px;margin-right:15px;cursor:pointer">
+                                            <div class="content">
+                                                <img src="data/icons/i2.png" class="center-block mb-20" style="max-width:64px" alt="">
+                                                <h4>手续费用</h4>
+                                                <p class="mt-10 text-center no-mb">提供最新的本产品条款信息。</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-4 no-pl no-pr">
+                                        <div class="tile-progress bg-accent" style="margin-left:15px;margin-right:15px;cursor:pointer">
+                                            <div class="content">
+                                                <img src="data/icons/i3.png" class="center-block mb-20" style="max-width:64px" alt="">
+                                                <h4>余额问题</h4>
+                                                <p class="mt-10 text-center no-mb">余额查询指南。</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-4 no-pl no-pr">
+                                        <div class="tile-progress bg-accent" style="margin-left:15px;margin-right:15px;cursor:pointer">
+                                            <div class="content">
+                                                <img src="data/icons/i4.png" class="center-block mb-20" style="max-width:64px" alt="">
+                                                <h4>全球支付</h4>
+                                                <p class="mt-10 text-center no-mb">提供外国网络资源信息。</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-4 no-pl no-pr">
+                                        <div class="tile-progress bg-accent" style="margin-left:15px;margin-right:15px;cursor:pointer">
+                                            <div class="content">
+                                                <img src="data/icons/i5.png" class="center-block mb-20" style="max-width:64px" alt="">
+                                                <h4> 投资问题</h4>
+                                                <p class="mt-10 text-center no-mb">提供资源买进卖出的条款信息。</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-4 no-pl no-pr">
+                                        <div class="tile-progress bg-accent" style="margin-left:15px;margin-right:15px;cursor:pointer">
+                                            <div class="content">
+                                                <img src="data/icons/i6.png" class="center-block mb-20" style="max-width:64px" alt="">
+                                                <h4>资源增值</h4>
+                                                <p class="mt-10 text-center no-mb">提供资源价格浮动的信息。</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    
+
+                                
+                                </div>
+                            </div>
+                    </section>
+                </div>
+               
+<!--                <div class="col-lg-12">-->
+<!--                    <section class="box has-border-left-3">-->
+<!--                        <header class="panel_header">-->
+<!--                            <h2 class="title pull-left">FAQ</h2>-->
+<!--                            <div class="actions panel_actions pull-right">-->
+<!--                                <a class="box_toggle fa fa-chevron-down"></a>-->
+<!--                                <a class="box_setting fa fa-cog" data-toggle="modal" href="#section-settings"></a>-->
+<!--                                <a class="box_close fa fa-times"></a>-->
+<!--                            </div>-->
+<!--                        </header>-->
+<!--                        <div class="content-body">-->
+<!--                            <div class="row">-->
+<!--                                <div class="col-xs-12">-->
+<!--                                    <h4 class="bold no-mt mb-20">常见问题</h4>-->
+<!--                                    -->
+<!--                                    &lt;!&ndash; Bootstrap FAQ - START &ndash;&gt;-->
+<!--                                    <div class="panel-group no-mb faq-panels" id="accordion">-->
+<!--                                        <div class="panel panel-default">-->
+<!--                                            <div class="panel-heading">-->
+<!--                                                <h4 class="panel-title">-->
+<!--                                            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">如何成为B-RAN的正式用户 ?</a>-->
+<!--                                        </h4>-->
+<!--                                            </div>-->
+<!--                                            <div id="collapseTwo" class="panel-collapse collapse">-->
+<!--                                                <div class="panel-body">-->
+<!--                                                    <p>用户上传真实身份信息，注册后即可成为B-RAN正式用户。</p>-->
+<!--                                                </div>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                        <div class="panel panel-default">-->
+<!--                                            <div class="panel-heading">-->
+<!--                                                <h4 class="panel-title">-->
+<!--                                                <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">如何在B-RAN中购买或者租赁无线资源?</a>-->
+<!--                                            </h4>-->
+<!--                                            </div>-->
+<!--                                            <div id="collapseThree" class="panel-collapse collapse">-->
+<!--                                                <div class="panel-body">-->
+<!--                                                    <p>点击侧边栏的“资源共享/交易” -> “购买”，您可以根据当前显示的资源列表进行选择购买。</p>-->
+<!--                                                </div>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                        <div class="panel panel-default">-->
+<!--                                            <div class="panel-heading">-->
+<!--                                                <h4 class="panel-title">-->
+<!--                                            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive">在B-RAN中共享无线资源会获得什么好处?</a>-->
+<!--                                        </h4>-->
+<!--                                            </div>-->
+<!--                                            <div id="collapseFive" class="panel-collapse collapse">-->
+<!--                                                <div class="panel-body">-->
+<!--                                                    <p>点击侧边栏的“资源共享/交易” -> “出售”，填写好资源类型和数量等相关信息后，如果资源被其他用户成功购买使用，您将按照标价获得收益。</p>-->
+<!--                                                </div>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                        <div class="panel panel-default">-->
+<!--                                            <div class="panel-heading">-->
+<!--                                                <h4 class="panel-title">-->
+<!--                                            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSix">如何查看历史资源购买出售记录?</a>-->
+<!--                                        </h4>-->
+<!--                                            </div>-->
+<!--                                            <div id="collapseSix" class="panel-collapse collapse">-->
+<!--                                                <div class="panel-body">-->
+<!--                                                    <p>点击侧边栏的“开放共享资源”后即可查看账户所有历史交易记录。</p>-->
+<!--                                                </div>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                        <div class="panel panel-default">-->
+<!--                                            <div class="panel-heading">-->
+<!--                                                <h4 class="panel-title">-->
+<!--                                            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseEight">资源交易的付款方式有那些 ?</a>-->
+<!--                                        </h4>-->
+<!--                                            </div>-->
+<!--                                            <div id="collapseEight" class="panel-collapse collapse">-->
+<!--                                                <div class="panel-body">-->
+<!--                                                    <p>目前B-RAN支持大部分主流在线支付方式。</p>-->
+<!--                                                </div>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                        -->
+<!--                                        &lt;!&ndash; bs faq end &ndash;&gt;-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </section>-->
+<!--                </div>-->
+<!--                -->
+                <div class="clearfix"></div>
+
+                <div class="col-lg-6">
+                    <section class="box has-border-left-3">
+                        <div class="content-body" style="padding-top:30px">
+                            <div class="row">
+                                <div class="col-xs-12">                                    
+                                    <div class="option-identity-wrapper no-mb">
+                                        <div class="tab-head" style="width:100%">
+                                            <h4 class="bold mb-20 no-mt">在论坛提问</h4>
+                                            <h4 class="no-mt"><small>加入网络资源区块链社区，分享自己的使用心得<br>发帖即可获得网络资源礼包</small></h4>
+
+                                            <a href="#" class="btn btn-primary mt-10 btn-corner"><i class="fa fa-check"></i> 加入我们</a>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="col-lg-6">
+                    <section class="box has-border-left-3">
+                        <div class="content-body" style="padding-top:30px">
+                            <div class="row">
+                                <div class="col-xs-12">                                    
+                                    <div class="option-identity-wrapper no-mb">
+                                        <div class="tab-head" style="width:100%">
+                                            <h4 class="bold mb-20 no-mt">访问我们的微博</h4>
+                                            <h4 class="no-mt"><small>提供最新的使用指南<br>发布最新的网络资源介绍</small>
+                                            </small></h4>
+
+                                            <a href="#" class="btn btn-primary mt-10 btn-corner"><i class="fa fa-check"></i> 立刻访问</a>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+               
+
+                <!-- MAIN CONTENT AREA ENDS -->
+            </section>
+        </div>
+        <!-- END CONTENT -->
+        <div class="page-chatapi hideit">
+
+            <div class="search-bar">
+                <input type="text" placeholder="Search" class="form-control">
+            </div>
+
+                        <div class="chat-wrapper">
+
+                <h4 class="group-head">Favourites</h4>
+                <ul class="contact-list">
+
+                    <li class="user-row " id='chat_user_1' data-user-id='1'>
+                        <div class="user-img">
+                            <a href="#"><img src="data/profile/avatar-1.png" alt=""></a>
+                        </div>
+                        <div class="user-info">
+                            <h4><a href="#">Joge Lucky</a></h4>
+                            <span class="status available" data-status="available"> Available</span>
+                        </div>
+                        <div class="user-status available">
+                            <i class="fa fa-circle"></i>
+                        </div>
+                    </li>
+                    <li class="user-row " id='chat_user_2' data-user-id='2'>
+                        <div class="user-img">
+                            <a href="#"><img src="data/profile/avatar-2.png" alt=""></a>
+                        </div>
+                        <div class="user-info">
+                            <h4><a href="#">Folisise Chosiel</a></h4>
+                            <span class="status away" data-status="away"> Away</span>
+                        </div>
+                        <div class="user-status away">
+                            <i class="fa fa-circle"></i>
+                        </div>
+                    </li>
+                    <li class="user-row " id='chat_user_3' data-user-id='3'>
+                        <div class="user-img">
+                            <a href="#"><img src="data/profile/avatar-3.png" alt=""></a>
+                        </div>
+                        <div class="user-info">
+                            <h4><a href="#">Aron Gonzalez</a></h4>
+                            <span class="status busy" data-status="busy"> Busy</span>
+                        </div>
+                        <div class="user-status busy">
+                            <i class="fa fa-circle"></i>
+                        </div>
+                    </li>
+
+                </ul>
+
+                <h4 class="group-head">More Contacts</h4>
+                <ul class="contact-list">
+
+                    <li class="user-row " id='chat_user_4' data-user-id='4'>
+                        <div class="user-img">
+                            <a href="#"><img src="data/profile/avatar-4.png" alt=""></a>
+                        </div>
+                        <div class="user-info">
+                            <h4><a href="#">Chris Fox</a></h4>
+                            <span class="status offline" data-status="offline"> Offline</span>
+                        </div>
+                        <div class="user-status offline">
+                            <i class="fa fa-circle"></i>
+                        </div>
+                    </li>
+                    <li class="user-row " id='chat_user_5' data-user-id='5'>
+                        <div class="user-img">
+                            <a href="#"><img src="data/profile/avatar-5.png" alt=""></a>
+                        </div>
+                        <div class="user-info">
+                            <h4><a href="#">Mogen Polish</a></h4>
+                            <span class="status offline" data-status="offline"> Offline</span>
+                        </div>
+                        <div class="user-status offline">
+                            <i class="fa fa-circle"></i>
+                        </div>
+                    </li>
+                    <li class="user-row " id='chat_user_6' data-user-id='6'>
+                        <div class="user-img">
+                            <a href="#"><img src="data/profile/avatar-1.png" alt=""></a>
+                        </div>
+                        <div class="user-info">
+                            <h4><a href="#">Smith Carter</a></h4>
+                            <span class="status available" data-status="available"> Available</span>
+                        </div>
+                        <div class="user-status available">
+                            <i class="fa fa-circle"></i>
+                        </div>
+                    </li>
+                    <li class="user-row " id='chat_user_7' data-user-id='7'>
+                        <div class="user-img">
+                            <a href="#"><img src="data/profile/avatar-2.png" alt=""></a>
+                        </div>
+                        <div class="user-info">
+                            <h4><a href="#">Amilia Gozenal</a></h4>
+                            <span class="status busy" data-status="busy"> Busy</span>
+                        </div>
+                        <div class="user-status busy">
+                            <i class="fa fa-circle"></i>
+                        </div>
+                    </li>
+                    <li class="user-row " id='chat_user_8' data-user-id='8'>
+                        <div class="user-img">
+                            <a href="#"><img src="data/profile/avatar-3.png" alt=""></a>
+                        </div>
+                        <div class="user-info">
+                            <h4><a href="#">Tahir Jemyship</a></h4>
+                            <span class="status away" data-status="away"> Away</span>
+                        </div>
+                        <div class="user-status away">
+                            <i class="fa fa-circle"></i>
+                        </div>
+                    </li>
+                    <li class="user-row " id='chat_user_9' data-user-id='9'>
+                        <div class="user-img">
+                            <a href="#"><img src="data/profile/avatar-4.png" alt=""></a>
+                        </div>
+                        <div class="user-info">
+                            <h4><a href="#">Johanson Wright</a></h4>
+                            <span class="status busy" data-status="busy"> Busy</span>
+                        </div>
+                        <div class="user-status busy">
+                            <i class="fa fa-circle"></i>
+                        </div>
+                    </li>
+                    <li class="user-row " id='chat_user_10' data-user-id='10'>
+                        <div class="user-img">
+                            <a href="#"><img src="data/profile/avatar-5.png" alt=""></a>
+                        </div>
+                        <div class="user-info">
+                            <h4><a href="#">Loni Tindall</a></h4>
+                            <span class="status away" data-status="away"> Away</span>
+                        </div>
+                        <div class="user-status away">
+                            <i class="fa fa-circle"></i>
+                        </div>
+                    </li>
+                    <li class="user-row " id='chat_user_11' data-user-id='11'>
+                        <div class="user-img">
+                            <a href="#"><img src="data/profile/avatar-1.png" alt=""></a>
+                        </div>
+                        <div class="user-info">
+                            <h4><a href="#">Natcho Herlaey</a></h4>
+                            <span class="status idle" data-status="idle"> Idle</span>
+                        </div>
+                        <div class="user-status idle">
+                            <i class="fa fa-circle"></i>
+                        </div>
+                    </li>
+                    <li class="user-row " id='chat_user_12' data-user-id='12'>
+                        <div class="user-img">
+                            <a href="#"><img src="data/profile/avatar-2.png" alt=""></a>
+                        </div>
+                        <div class="user-info">
+                            <h4><a href="#">Shakira Swedan</a></h4>
+                            <span class="status idle" data-status="idle"> Idle</span>
+                        </div>
+                        <div class="user-status idle">
+                            <i class="fa fa-circle"></i>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+
+
+        <div class="chatapi-windows "> 
+
+
+        </div>
+    </div>
+    <!-- END CONTAINER -->
+    <!-- LOAD FILES AT PAGE END FOR FASTER LOADING -->
+
+
+    <!-- CORE JS FRAMEWORK - START -->
+    <script src="assets/js/jquery-1.11.2.min.js"></script>
+    <script src="assets/js/jquery.easing.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/plugins/pace/pace.min.js"></script>
+    <script src="assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="assets/plugins/viewport/viewportchecker.js"></script>
+    <script>
+        window.jQuery||document.write('<script src="assets/js/jquery-1.11.2.min.js"><\/script>');
+    </script>
+    <!-- CORE JS FRAMEWORK - END -->
+
+
+    <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - START -->
+
+    <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - END -->
+
+
+    <!-- CORE TEMPLATE JS - START -->
+    <script src="assets/js/scripts.js"></script>
+    <!-- END CORE TEMPLATE JS - END -->
+
+     <script lang="javascript">
+         var setCookie = function (name, value, day) {
+             var expires = day * 24 * 60 * 60 * 1000;
+             var exp = new Date();
+             exp.setTime(exp.getTime() + expires);
+             document.cookie = name + "=" + value + ";expires=" + exp.toUTCString();
+         };
+
+         var delCookie = function (name) {
+             setCookie(name, ' ', -1);
+         };
+
+         function deletecookie() {
+             delCookie('nickname',' ',-1)
+             delCookie('userid',' ',-1)
+             delCookie('password',' ',-1)
+         }
+
+         function logout() {
+             deletecookie();
+             location.reload();
+         }
+
+         var getCookie = function (name) {
+             var arr;
+             var reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+             if (arr = document.cookie.match(reg)){
+                 return arr[2];
+             }
+             else
+                 return null;
+         };
+     </script>
+
+     <script lang="javascript">
+         var nickname = "";
+         var password = "";
+         var userid = "";
+
+         // Get Cookies
+         nickname = getCookie("nickname");
+         userid = getCookie("userid");
+         password = getCookie("password");
+         if (nickname === "" || nickname === null)
+             document.location = "ui-login.html";
+         else
+             $("#title_nickname").html(nickname + "  <i class=\"fa fa-angle-down\"></i>");
+     </script>
+
+</body>
+
+</html>

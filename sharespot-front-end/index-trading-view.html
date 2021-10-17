@@ -1,0 +1,800 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- 
+        * @Package:  B-RAN
+        * @Version: 5.0.0
+        * @Time: 9.6-1100
+    -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>ShareSpot</title>
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon" />
+    <!-- For iPhone -->
+    <link rel="apple-touch-icon-precomposed" href="assets/images/apple-touch-icon-57-precomposed.png">
+    <!-- For iPhone 4 Retina display -->
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/images/apple-touch-icon-114-precomposed.png">
+    <!-- For iPad -->
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/images/apple-touch-icon-72-precomposed.png">
+    <!-- For iPad Retina display -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/images/apple-touch-icon-144-precomposed.png">
+
+    <!-- CORE CSS FRAMEWORK - START -->
+    <link href="assets/plugins/pace/pace-theme-flash.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/plugins/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/fonts/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css" />
+    <link href="assets/fonts/webfont/cryptocoins.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/animate.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/plugins/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" type="text/css" />
+    <!-- CORE CSS FRAMEWORK - END -->
+
+    <!-- HEADER SCRIPTS INCLUDED ON THIS PAGE - START -->
+
+    <link href="assets/plugins/jvectormap/jquery-jvectormap-2.0.1.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="assets/plugins/morris-chart/css/morris.css" rel="stylesheet" type="text/css" media="screen" />
+
+    <!-- HEADER SCRIPTS INCLUDED ON THIS PAGE - END -->
+
+    <!-- CORE CSS TEMPLATE - START -->
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="https://tokrix.netlify.app/assets/css/responsive.css" rel="stylesheet" type="text/css" />
+    <!-- CORE CSS TEMPLATE - END -->
+
+</head>
+<!-- END HEAD -->
+
+<!-- BEGIN BODY -->
+
+<body class=" ">
+    <!-- START TOPBAR -->
+    <div class='page-topbar '>
+        <div class='logo-area'>
+
+        </div>
+        <div class='quick-area'>
+            <div class='pull-left'>
+                <ul class="info-menu left-links list-inline list-unstyled">
+                    <li class="sidebar-toggle-wrap">
+                        <a href="#" data-toggle="sidebar" class="sidebar_toggle">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </li>
+<!--                    <li class="notify-toggle-wrapper">-->
+<!--                        <a href="#" data-toggle="dropdown" class="toggle">-->
+<!--                            <i class="fa fa-bell"></i>-->
+<!--                            <span class="badge badge-accent">3</span>-->
+<!--                        </a>-->
+<!--                        <ul class="dropdown-menu notifications animated fadeIn">-->
+<!--                            <li class="total">-->
+<!--                                <span class="small">-->
+<!--                                您有<strong>3</strong>条新通知-->
+<!--                                <a href="javascript:;" class="pull-right">标记所有消息为已读</a>-->
+<!--                            </span>-->
+<!--                            </li>-->
+<!--                            <li class="list">-->
+
+<!--                                <ul class="dropdown-menu-list list-unstyled ps-scrollbar">-->
+<!--                                    <li class="unread available">-->
+<!--                                        &lt;!&ndash; available: success, warning, info, error &ndash;&gt;-->
+<!--                                        <a href="javascript:;">-->
+<!--                                            <div class="notice-icon">-->
+<!--                                                <i class="fa fa-check"></i>-->
+<!--                                            </div>-->
+<!--                                            <div>-->
+<!--                                                <span class="name">-->
+<!--                                                    <strong>成功交易1CNY</strong>-->
+<!--                                                    <span class="time small">15分钟前</span>-->
+<!--                                                </span>-->
+<!--                                            </div>-->
+<!--                                        </a>-->
+<!--                                    </li>-->
+<!--                                    <li class="unread away">-->
+<!--                                        &lt;!&ndash; available: success, warning, info, error &ndash;&gt;-->
+<!--                                        <a href="javascript:;">-->
+<!--                                            <div class="notice-icon">-->
+<!--                                                <i class="fa fa-clock-o"></i>-->
+<!--                                            </div>-->
+<!--                                            <div>-->
+<!--                                                <span class="name">-->
+<!--                                                    <strong>4个交易待打包</strong>-->
+<!--                                                    <span class="time small">45分钟前</span>-->
+<!--                                                </span>-->
+<!--                                            </div>-->
+<!--                                        </a>-->
+<!--                                    </li>-->
+<!--                                    <li class=" busy">-->
+<!--                                        &lt;!&ndash; available: success, warning, info, error &ndash;&gt;-->
+<!--                                        <a href="javascript:;">-->
+<!--                                            <div class="notice-icon">-->
+<!--                                                <i class="fa fa-times"></i>-->
+<!--                                            </div>-->
+<!--                                            <div>-->
+<!--                                                <span class="name">-->
+<!--                                                    <strong>取消1个交易</strong>-->
+<!--                                                    <span class="time small">1小时前</span>-->
+<!--                                                </span>-->
+<!--                                            </div>-->
+<!--                                        </a>-->
+<!--                                    </li>-->
+<!--                                   -->
+<!--                                    <li class=" available">-->
+<!--                                        &lt;!&ndash; available: success, warning, info, error &ndash;&gt;-->
+<!--                                        <a href="javascript:;">-->
+<!--                                            <div class="notice-icon">-->
+<!--                                                <i class="fa fa-check"></i>-->
+<!--                                            </div>-->
+<!--                                            <div>-->
+<!--                                                <span class="name">-->
+<!--                                                    <strong>成功交易2CNY</strong>-->
+<!--                                                    <span class="time small">3月14日</span>-->
+<!--                                                </span>-->
+<!--                                            </div>-->
+<!--                                        </a>-->
+<!--                                    </li>-->
+
+<!--                                </ul>-->
+
+<!--                            </li>-->
+
+<!--&lt;!&ndash;                            <li class="external">&ndash;&gt;-->
+<!--&lt;!&ndash;                                <a href="javascript:;">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <span>Read All Notifications</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                                </a>&ndash;&gt;-->
+<!--&lt;!&ndash;                            </li>&ndash;&gt;-->
+<!--                        </ul>-->
+<!--                    </li>-->
+                    <li class="hidden-sm hidden-xs searchform">
+                        <form action="#" method="post">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                <i class="fa fa-search"></i>
+                            </span>
+                                <input type="text" class="form-control animated fadeIn" placeholder="搜索">
+                            </div>
+                            <input type='submit' value="">
+                        </form>
+                    </li>
+                </ul>
+            </div>
+            <div class='pull-right'>
+                <ul class="info-menu right-links list-inline list-unstyled">
+                    <li class="profile">
+                        <a href="#" data-toggle="dropdown" class="toggle">
+                            <img src="data/profile/profile-crm.jpg" alt="user-image" class="img-circle img-inline">
+                            <span id="title_nickname">Jiaheng Wang <i class="fa fa-angle-down"></i></span>
+                        </a>
+                        <ul class="dropdown-menu profile animated fadeIn">
+                            <li>
+                                <a href="account-confirmation.html">
+                                    <i class="fa fa-wrench"></i> 设置
+                                </a>
+                            </li>
+                            <li>
+                                <a href="ui-support.html">
+                                    <i class="fa fa-info"></i> 帮助
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:logout();">
+                                    <i class="fa fa-lock"></i> 退出登录
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <!-- END TOPBAR -->
+    <!-- START CONTAINER -->
+
+
+
+    <div class="page-container row-fluid container-fluid">
+
+        <!-- SIDEBAR - START -->
+
+        <div class="page-sidebar fixedscroll">
+
+            <!-- MAIN MENU - START -->
+            <div class="page-sidebar-wrapper" id="main-menu-wrapper">
+
+
+                <ul class='wraplist'>
+<!--                    <li class='menusection'>我的</li>-->
+                    <li class="">
+                        <a href="index-dashboard.html">
+                            <i class="fa fa-th-large"></i>
+                            <span class="title">概览</span>
+                        </a>
+                    </li>
+
+
+                    <li class="">
+                        <a href="javascript:;">
+                            <i class="fa fa-exchange"></i>
+                            <span class="title">资源共享/交易</span>
+                            <span class="arrow "></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a class="" href="buying.html">购买</a>
+                            </li>
+                            <li>
+                                <a class="" href="selling.html">出售</a>
+                            </li>
+                            <li>
+                                <a class="" href="sharing.html">授权</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="">
+                        <a href="security.html">
+                            <i class="fa fa-lock"></i>
+                            <span class="title">安全</span>
+                        </a>
+                    </li>
+
+                    <li class="">
+                        <a href="javascript:;">
+                            <i class="fa fa-gear"></i>
+                            <span class="title">设置</span>
+                            <span class="arrow "></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a class="" href="settings.html">通用</a>
+                            </li>
+                            <li>
+                                <a class="" href="account-confirmation.html">账户认证</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="javascript:;">
+                            <i class="fa fa-question-circle"></i>
+                            <span class="title">技术支持</span>
+                            <span class="arrow "></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a class="" href="ui-faq.html">常见问题</a>
+                            </li>
+                            <li>
+                                <a class="" href="ui-support.html">帮助中心</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+            <!-- MAIN MENU - END -->
+
+        </div>
+        <!--  SIDEBAR - END -->
+
+        <!-- START CONTENT -->
+        <section id="main-content" class=" ">
+            <div class="wrapper main-wrapper row" style=''>
+
+                <div class='col-xs-12'>
+                    <div class="page-title">
+
+                        <div class="pull-left">
+                            <!-- PAGE HEADING TAG - START -->
+                            <h1 class="title">开放共享资源</h1>
+                            <!-- PAGE HEADING TAG - END -->
+                        </div>
+
+                    </div>
+                </div>
+                
+            <div class="clearfix"></div>
+                
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="clearfix"></div>
+
+
+                <div class="col-lg-12">
+                    <section class="box" style="border-left: 3px solid #e77512;">
+                        <header class="panel_header">
+                            <h2 class="title pull-left">资源列表</h2>
+                            <div class="actions panel_actions pull-right">
+                                <a class="box_toggle fa fa-chevron-down"></a>
+                                <a class="box_setting fa fa-cog" data-toggle="modal" href="#section-settings"></a>
+                                <a class="box_close fa fa-times"></a>
+                            </div>
+                        </header>
+                        <div class="content-body">
+                            <div class="row">
+                                <div class="col-xs-12">
+
+                                    <div class="table-responsive" data-pattern="priority-columns">
+                                        <table id="tech-companies-1" class="table table-small-font no-mb table-bordered table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th data-priority="2">交易ID</th>
+                                                    <th data-priority="2">交易类型</th>
+                                                    <th data-priority="2">区块高度</th>
+                                                    <th data-priority="2">出块时间</th>
+                                                    <th data-priority="2">发起者</th>
+                                                    <th data-priority="2">接收者</th>
+                                                    <th data-priority="2">金额</th>
+                                            </thead>
+                                            <tbody>
+                                                <!--
+                                                在这一部分进行修改开放共享资源的记录
+                                                说明：每条记录有7个属性，代表了这条交易的一些属性，接下来说明每个属性的含义
+                                                1、该交易记录的哈希值；（这里如果显示完整的哈希值会过长，所以我昨天只显示出了前四位，后面用省略号，可以根据自己的调整来修改，界面美观即可）
+                                                3、该笔交易所在区块，使用区块高度来描述
+                                                2、交易的类型；根据我们的开发分为三个部分：购买、出售、共享，所以这里对应的应该有三个类型
+                                                4、出块时间；对应的该笔交易所在区块的出块时间
+                                                5、交易发起者的地址，比如如果是购买者就是买家的地址
+                                                6、交易接收者的地址
+                                                7、交易金额
+
+                                                注意：可以看到示范交易记录（前四条）有不同的颜色，这个是根据标签来完成的，目前我们自己写了4种状态，分别是complete,pending,cancelled,warning，分别是绿色，蓝色，紫色和红色，我们想着的是前三个颜色分别对应三种交易类型，这里根据修改者自己统一下即可，红色代表该笔交易失败。
+
+                                                修改案例：
+                                                比如第一个记录原来的绿色，想改为蓝色，则将标签对应的complete改为pending即可
+                                                <tr>
+                                                    <td><i class="fa fa-dot-circle-o pending" width="1"></i>0xcb51...</td>
+                                                    <td><span class="status-pending">资源出售</span></td>
+                                                    <td><span class="status-pending">3210</span></td>
+                                                    <td><i class="fa fa-plus pending normal"></i>Sep-06-2021 12:48:36</td>
+                                                    <td><span class="status-pending">0xea67...</span></td>
+                                                    <td><span class="status-pending">0x7bfc...</span></td>
+                                                    <td><i class="fa fa-rmb"></i>66.66</td>
+                                                </tr>
+
+                                                同时需要修改对应的小图标，可以设置三种交易类型不同的图标，失败也是一个单独的图标，图标修改对应的第一个属性即可，即fa fa-dot-circle-o这个就是图标的属性，这个可以去fontawesome网站查询合适的其他几个图标即可，一定要对应上。
+                                                
+                                                以下请修改者填充
+                                                交易类型颜色：
+                                                购买：complete
+                                                出售：pending
+                                                共享：cancelled
+                                                失败：warning
+
+                                                交易类型图标：
+                                                购买：fa fa-check-circle
+                                                出售：fa fa-check-circle
+                                                共享：fa fa-cloud-upload
+                                                失败：fa fa-exclamation-circle
+                                                -->
+
+                                                <tr>
+                                                    <td><i class="fa fa-check-circle complete" width="1"></i>0xcb51...</td>
+                                                    <td><span class="status-complete">资源购买</span></td>
+                                                    <td><span class="status-complete">3210</span></td>
+                                                    <td><i class="fa fa-plus complete normal"></i>Sep-06-2021 12:48:36</td>
+                                                    <td><span class="status-complete">0xea67...</span></td>
+                                                    <td><span class="status-complete">0x7bfc...</span></td>
+                                                    <td><i class="fa fa-rmb"></i>151.30</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><i class="fa fa-check-circle pending" width="1"></i>0xab31...</td>
+                                                    <td><span class="status-pending">资源出售</span></td>
+                                                    <td><span class="status-pending">3209</span></td>
+                                                    <td><i class="fa fa-plus pending normal"></i>Sep-06-2021 12:30:31</td>
+                                                    <td><span class="status-pending">0xad17...</span></td>
+                                                    <td><span class="status-pending">0x7b06...</span></td>
+                                                    <td><i class="fa fa-rmb"></i>70.00</td>
+                                                </tr> 
+                                                <tr>
+                                                    <td><i class="fa fa-check-circle pending" width="1"></i>0x751f...</td>
+                                                    <td><span class="status-pending">资源出售</span></td>
+                                                    <td><span class="status-pending">3208</span></td>
+                                                    <td><i class="fa fa-plus pending normal"></i>Sep-06-2021 12:30:31</td>
+                                                    <td><span class="status-pending">0x4a44...</span></td>
+                                                    <td><span class="status-pending">0xb161...</span></td>
+                                                    <td><i class="fa fa-rmb"></i>45.50</td>
+                                                </tr> 
+                                                <tr>
+                                                    <td><i class="fa fa-exclamation-circle warning" width="1"></i>0xd392...</td>
+                                                    <td><span class="status-warning">交易失败</span></td>
+                                                    <td><span class="status-warning">3207</span></td>
+                                                    <td><i class="fa fa-plus warning normal"></i>Sep-06-2021 12:11:37</td>
+                                                    <td><span class="status-warning">0x00c7...</span></td>
+                                                    <td><span class="status-warning">0xad9a...</span></td>
+                                                    <td><i class="fa fa-rmb"></i>79.98</td>
+                                                </tr> 
+                                                <tr>
+                                                    <td><i class="fa fa-check-circle complete" width="1"></i>0xce52...</td>
+                                                    <td><span class="status-complete">资源购买</span></td>
+                                                    <td><span class="status-complete">3206</span></td>
+                                                    <td><i class="fa fa-plus complete normal"></i>Sep-06-2021 10:03:02</td>
+                                                    <td><span class="status-complete">0x5b7c...</span></td>
+                                                    <td><span class="status-complete">0x5580...</span></td>
+                                                    <td><i class="fa fa-rmb"></i>45.67</td>
+                                                </tr> 
+                                                <tr>
+                                                    <td><i class="fa fa-exclamation-circle warning" width="1"></i>0xc52a...</td>
+                                                    <td><span class="status-warning">交易失败</span></td>
+                                                    <td><span class="status-warning">3206</span></td>
+                                                    <td><i class="fa fa-plus warning normal"></i>Sep-06-2021 10:03:02</td>
+                                                    <td><span class="status-warning">0xc900...</span></td>
+                                                    <td><span class="status-warning">0x4fa8...</span></td>
+                                                    <td><i class="fa fa-rmb"></i>15.00</td>
+                                                </tr> 
+                                                <tr>
+                                                    <td><i class="fa fa-cloud-upload cancelled" width="1"></i>0x3602...</td>
+                                                    <td><span class="status-cancelled">资源共享</span></td>
+                                                    <td><span class="status-cancelled">3206</span></td>
+                                                    <td><i class="fa fa-plus cancelled normal"></i>Sep-06-2021 10:03:02</td>
+                                                    <td><span class="status-cancelled">0xea67...</span></td>
+                                                    <td><span class="status-cancelled">0x7bfc...</span></td>
+                                                    <td><i class="fa fa-rmb"></i>11.66</td>
+                                                </tr> 
+                                                <tr>
+                                                    <td><i class="fa fa-check-circle complete" width="1"></i>0x2a15...</td>
+                                                    <td><span class="status-complete">资源购买</span></td>
+                                                    <td><span class="status-complete">3205</span></td>
+                                                    <td><i class="fa fa-plus complete normal"></i>Sep-06-2021 09:08:26</td>
+                                                    <td><span class="status-complete">0xea67...</span></td>
+                                                    <td><span class="status-complete">0x7bfc...</span></td>
+                                                    <td><i class="fa fa-rmb"></i>68.00</td>
+                                                </tr> 
+                                                <tr>
+                                                    <td><i class="fa fa-check-circle complete" width="1"></i>0xcd58...</td>
+                                                    <td><span class="status-complete">资源购买</span></td>
+                                                    <td><span class="status-complete">3205</span></td>
+                                                    <td><i class="fa fa-plus complete normal"></i>Sep-06-2021 09:08:26</td>
+                                                    <td><span class="status-complete">0xaed7...</span></td>
+                                                    <td><span class="status-complete">0x75f9...</span></td>
+                                                    <td><i class="fa fa-rmb"></i>64.66</td>
+                                                </tr> 
+                                                <tr>
+                                                    <td><i class="fa fa-check-circle pending" width="1"></i>0xbb51...</td>
+                                                    <td><span class="status-pending">资源出售</span></td>
+                                                    <td><span class="status-pending">3204</span></td>
+                                                    <td><i class="fa fa-plus pending normal"></i>Sep-06-2021 08:11:07</td>
+                                                    <td><span class="status-pending">0xaa69...</span></td>
+                                                    <td><span class="status-pending">0x1bdd...</span></td>
+                                                    <td><i class="fa fa-rmb"></i>20.00</td>
+                                                </tr> 
+                                                <tr>
+                                                    <td><i class="fa fa-check-circle pending" width="1"></i>0x3b51...</td>
+                                                    <td><span class="status-pending">资源出售</span></td>
+                                                    <td><span class="status-pending">3203</span></td>
+                                                    <td><i class="fa fa-plus pending normal"></i>Sep-06-2021 08:04:56</td>
+                                                    <td><span class="status-pending">0xea12...</span></td>
+                                                    <td><span class="status-pending">0x4b5c...</span></td>
+                                                    <td><i class="fa fa-rmb"></i>34.90</td>
+                                                </tr> 
+                                                <tr>
+                                                    <td><i class="fa fa-check-circle complete" width="1"></i>0x2bc5...</td>
+                                                    <td><span class="status-complete">资源购买</span></td>
+                                                    <td><span class="status-complete">3202</span></td>
+                                                    <td><i class="fa fa-plus complete normal"></i>Sep-06-2021 05:18:56</td>
+                                                    <td><span class="status-complete">0xea67...</span></td>
+                                                    <td><span class="status-complete">0x2a55...</span></td>
+                                                    <td><i class="fa fa-rmb"></i>20.98</td>
+                                                </tr> 
+                                                <tr>
+                                                    <td><i class="fa fa-exclamation-circle warning" width="1"></i>0xf11d...</td>
+                                                    <td><span class="status-warning">交易失败</span></td>
+                                                    <td><span class="status-warning">3202</span></td>
+                                                    <td><i class="fa fa-plus warning normal"></i>Sep-06-2021 05:18:56</td>
+                                                    <td><span class="status-warning">0xa56d...</span></td>
+                                                    <td><span class="status-warning">0xf29d...</span></td>
+                                                    <td><i class="fa fa-rmb"></i>15.40</td>
+                                                </tr> 
+                                                <tr>
+                                                    <td><i class="fa fa-check-circle complete" width="1"></i>0xaf0d...</td>
+                                                    <td><span class="status-complete">资源购买</span></td>
+                                                    <td><span class="status-complete">3201</span></td>
+                                                    <td><i class="fa fa-plus complete normal"></i>Sep-06-2021 03:41:18</td>
+                                                    <td><span class="status-complete">0x9f90...</span></td>
+                                                    <td><span class="status-complete">0x7bfc...</span></td>
+                                                    <td><i class="fa fa-rmb"></i>100.05</td>
+                                                </tr> 
+                                                <tr>
+                                                    <td><i class="fa fa-check-circle pending" width="1"></i>0x7c6a...</td>
+                                                    <td><span class="status-pending">资源出售</span></td>
+                                                    <td><span class="status-pending">3200</span></td>
+                                                    <td><i class="fa fa-plus pending normal"></i>Sep-05-2021 23:48:36</td>
+                                                    <td><span class="status-pending">0xff65...</span></td>
+                                                    <td><span class="status-pending">0xc00d...</span></td>
+                                                    <td><i class="fa fa-rmb"></i>207.90</td>
+                                                </tr> 
+                                                <tr>
+                                                    <td><i class="fa fa-check-circle complete" width="1"></i>0x6f8d...</td>
+                                                    <td><span class="status-complete">资源购买</span></td>
+                                                    <td><span class="status-complete">3199</span></td>
+                                                    <td><i class="fa fa-plus complete normal"></i>Sep-05-2021 23:45:10</td>
+                                                    <td><span class="status-complete">0xcb4d...</span></td>
+                                                    <td><span class="status-complete">0x1c5f...</span></td>
+                                                    <td><i class="fa fa-rmb"></i>10.00</td>
+                                                </tr> 
+                                                <tr>
+                                                    <td><i class="fa fa-cloud-upload cancelled" width="1"></i>0x8cff...</td>
+                                                    <td><span class="status-cancelled">资源共享</span></td>
+                                                    <td><span class="status-cancelled">3199</span></td>
+                                                    <td><i class="fa fa-plus cancelled normal"></i>Sep-05-2021 23:45:10</td>
+                                                    <td><span class="status-cancelled">0x1c0f...</span></td>
+                                                    <td><span class="status-cancelled">0x8c5b...</span></td>
+                                                    <td><i class="fa fa-rmb"></i>64.66</td>
+                                                </tr> 
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="clearfix"></div>
+
+                <!-- MAIN CONTENT AREA ENDS -->
+            </div>
+        </section>
+        <!-- END CONTENT -->
+        <div class="page-chatapi hideit">
+
+            <div class="search-bar">
+                <input type="text" placeholder="Search" class="form-control">
+            </div>
+
+            <div class="chat-wrapper">
+
+                <h4 class="group-head">Favourites</h4>
+                <ul class="contact-list">
+
+                    <li class="user-row " id='chat_user_1' data-user-id='1'>
+                        <div class="user-img">
+                            <a href="#"><img src="data/profile/avatar-1.png" alt=""></a>
+                        </div>
+                        <div class="user-info">
+                            <h4><a href="#">Joge Lucky</a></h4>
+                            <span class="status available" data-status="available"> Available</span>
+                        </div>
+                        <div class="user-status available">
+                            <i class="fa fa-circle"></i>
+                        </div>
+                    </li>
+                    <li class="user-row " id='chat_user_2' data-user-id='2'>
+                        <div class="user-img">
+                            <a href="#"><img src="data/profile/avatar-2.png" alt=""></a>
+                        </div>
+                        <div class="user-info">
+                            <h4><a href="#">Folisise Chosiel</a></h4>
+                            <span class="status away" data-status="away"> Away</span>
+                        </div>
+                        <div class="user-status away">
+                            <i class="fa fa-circle"></i>
+                        </div>
+                    </li>
+                    <li class="user-row " id='chat_user_3' data-user-id='3'>
+                        <div class="user-img">
+                            <a href="#"><img src="data/profile/avatar-3.png" alt=""></a>
+                        </div>
+                        <div class="user-info">
+                            <h4><a href="#">Aron Gonzalez</a></h4>
+                            <span class="status busy" data-status="busy"> Busy</span>
+                        </div>
+                        <div class="user-status busy">
+                            <i class="fa fa-circle"></i>
+                        </div>
+                    </li>
+
+                </ul>
+
+                <h4 class="group-head">More Contacts</h4>
+                <ul class="contact-list">
+
+                    <li class="user-row " id='chat_user_4' data-user-id='4'>
+                        <div class="user-img">
+                            <a href="#"><img src="data/profile/avatar-4.png" alt=""></a>
+                        </div>
+                        <div class="user-info">
+                            <h4><a href="#">Chris Fox</a></h4>
+                            <span class="status offline" data-status="offline"> Offline</span>
+                        </div>
+                        <div class="user-status offline">
+                            <i class="fa fa-circle"></i>
+                        </div>
+                    </li>
+                    <li class="user-row " id='chat_user_5' data-user-id='5'>
+                        <div class="user-img">
+                            <a href="#"><img src="data/profile/avatar-5.png" alt=""></a>
+                        </div>
+                        <div class="user-info">
+                            <h4><a href="#">Mogen Polish</a></h4>
+                            <span class="status offline" data-status="offline"> Offline</span>
+                        </div>
+                        <div class="user-status offline">
+                            <i class="fa fa-circle"></i>
+                        </div>
+                    </li>
+                    <li class="user-row " id='chat_user_6' data-user-id='6'>
+                        <div class="user-img">
+                            <a href="#"><img src="data/profile/avatar-1.png" alt=""></a>
+                        </div>
+                        <div class="user-info">
+                            <h4><a href="#">Smith Carter</a></h4>
+                            <span class="status available" data-status="available"> Available</span>
+                        </div>
+                        <div class="user-status available">
+                            <i class="fa fa-circle"></i>
+                        </div>
+                    </li>
+                    <li class="user-row " id='chat_user_7' data-user-id='7'>
+                        <div class="user-img">
+                            <a href="#"><img src="data/profile/avatar-2.png" alt=""></a>
+                        </div>
+                        <div class="user-info">
+                            <h4><a href="#">Amilia Gozenal</a></h4>
+                            <span class="status busy" data-status="busy"> Busy</span>
+                        </div>
+                        <div class="user-status busy">
+                            <i class="fa fa-circle"></i>
+                        </div>
+                    </li>
+                    <li class="user-row " id='chat_user_8' data-user-id='8'>
+                        <div class="user-img">
+                            <a href="#"><img src="data/profile/avatar-3.png" alt=""></a>
+                        </div>
+                        <div class="user-info">
+                            <h4><a href="#">Tahir Jemyship</a></h4>
+                            <span class="status away" data-status="away"> Away</span>
+                        </div>
+                        <div class="user-status away">
+                            <i class="fa fa-circle"></i>
+                        </div>
+                    </li>
+                    <li class="user-row " id='chat_user_9' data-user-id='9'>
+                        <div class="user-img">
+                            <a href="#"><img src="data/profile/avatar-4.png" alt=""></a>
+                        </div>
+                        <div class="user-info">
+                            <h4><a href="#">Johanson Wright</a></h4>
+                            <span class="status busy" data-status="busy"> Busy</span>
+                        </div>
+                        <div class="user-status busy">
+                            <i class="fa fa-circle"></i>
+                        </div>
+                    </li>
+                    <li class="user-row " id='chat_user_10' data-user-id='10'>
+                        <div class="user-img">
+                            <a href="#"><img src="data/profile/avatar-5.png" alt=""></a>
+                        </div>
+                        <div class="user-info">
+                            <h4><a href="#">Loni Tindall</a></h4>
+                            <span class="status away" data-status="away"> Away</span>
+                        </div>
+                        <div class="user-status away">
+                            <i class="fa fa-circle"></i>
+                        </div>
+                    </li>
+                    <li class="user-row " id='chat_user_11' data-user-id='11'>
+                        <div class="user-img">
+                            <a href="#"><img src="data/profile/avatar-1.png" alt=""></a>
+                        </div>
+                        <div class="user-info">
+                            <h4><a href="#">Natcho Herlaey</a></h4>
+                            <span class="status idle" data-status="idle"> Idle</span>
+                        </div>
+                        <div class="user-status idle">
+                            <i class="fa fa-circle"></i>
+                        </div>
+                    </li>
+                    <li class="user-row " id='chat_user_12' data-user-id='12'>
+                        <div class="user-img">
+                            <a href="#"><img src="data/profile/avatar-2.png" alt=""></a>
+                        </div>
+                        <div class="user-info">
+                            <h4><a href="#">Shakira Swedan</a></h4>
+                            <span class="status idle" data-status="idle"> Idle</span>
+                        </div>
+                        <div class="user-status idle">
+                            <i class="fa fa-circle"></i>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="chatapi-windows ">
+
+        </div>
+    </div>
+    <!-- END CONTAINER -->
+    <!-- LOAD FILES AT PAGE END FOR FASTER LOADING -->
+
+    <!-- CORE JS FRAMEWORK - START -->
+    <script src="assets/js/jquery-1.11.2.min.js"></script>
+    <script src="assets/js/jquery.easing.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/plugins/pace/pace.min.js"></script>
+    <script src="assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="assets/plugins/viewport/viewportchecker.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="assets/js/jquery-1.11.2.min.js"><\/script>');
+    </script>
+    <!-- CORE JS FRAMEWORK - END -->
+
+    <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - START -->
+
+    <script src="assets/plugins/echarts/echarts-custom-for-dashboard.js"></script>
+
+    <script src="assets/plugins/flot-chart/jquery.flot.js"></script>
+    <script src="assets/plugins/flot-chart/jquery.flot.time.js"></script>
+    <script src="assets/js/chart-flot.js"></script>
+
+    <script src="assets/plugins/morris-chart/js/raphael-min.js"></script>
+    <script src="assets/plugins/morris-chart/js/morris.min.js"></script>
+    <script src="assets/js/chart-morris.js"></script>
+    <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - END -->
+
+    <!-- CORE TEMPLATE JS - START -->
+    <script src="assets/js/scripts.js"></script>
+    <!-- END CORE TEMPLATE JS - END -->
+
+    <script lang="javascript">
+        var setCookie = function (name, value, day) {
+            var expires = day * 24 * 60 * 60 * 1000;
+            var exp = new Date();
+            exp.setTime(exp.getTime() + expires);
+            document.cookie = name + "=" + value + ";expires=" + exp.toUTCString();
+        };
+
+        var delCookie = function (name) {
+            setCookie(name, ' ', -1);
+        };
+
+        function deletecookie() {
+            delCookie('nickname',' ',-1)
+            delCookie('userid',' ',-1)
+            delCookie('password',' ',-1)
+        }
+
+        function logout() {
+            deletecookie();
+            location.reload();
+        }
+
+        var getCookie = function (name) {
+            var arr;
+            var reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+            if (arr = document.cookie.match(reg)){
+                return arr[2];
+            }
+            else
+                return null;
+        };
+    </script>
+
+    <script lang="javascript">
+        var nickname = "";
+        var password = "";
+        var userid = "";
+
+        // Get Cookies
+        nickname = getCookie("nickname");
+        userid = getCookie("userid");
+        password = getCookie("password");
+        if (nickname === "" || nickname === null)
+            document.location = "ui-login.html";
+        else
+            $("#title_nickname").html(nickname + "  <i class=\"fa fa-angle-down\"></i>");
+    </script>
+
+</body>
+
+</html>
