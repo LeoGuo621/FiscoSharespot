@@ -1,8 +1,43 @@
-# 后端响应框架
+# ShareSpot区块链开放式网络共享
 
-[toc]
+一个基于FISCO BCOS区块链网络的无线网络资源共享平台
 
-## 接口列表
+- [FISCO BCOS](https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/introduction.html)是由国内企业主导研发、对外开源、安全可控的企业级金融联盟链底层平台，由金链盟开源工作组协作打造，并于2017年正式对外开源。
+- **ShareSpot**最初由东南大学移动通信国家重点实验室的团队开发。
+- 版权所有为开发团队。未经团队授权，严禁任何修改和商业用途。
+
+## 项目介绍
+
+ShareSpot是一个基于FISCO BCOS区块链的无线资源共享与交易平台，用户既可以是无线资源的提供者，又可以是无线资源的消费者。拥有闲置无线资源的用户，可以通过 ShareSpot 申报无线资源的各类信息，并以此得到收益。需要接入无线资源的用户，可以通过 ShareSpot 查看所有可购买的无线资源，在支付相应服务费用后可以享受合约规定时间内的无线服务。
+
+### 项目环境及开发工具
+
+项目环境要求：
+
+- go
+- Docker
+
+开发工具：
+
+- Goland
+- Remix
+- FISCO BCOS
+
+开发环境：
+
+- GO：1.17.2
+- Mysql：5.7
+- soidity：^0.4.25
+
+### 项目演示
+
+ShareSpot项目Demo地址：http://exhard.cn/ss/ui-login.html
+
+### 项目架构图
+
+![image-20211017151558581](https://luochengyu.oss-cn-beijing.aliyuncs.com/img/image-20211017151558581.png)
+
+## 后端接口列表
 
 |               API               | 请求方式 |          功能          |                       参数                        |
 | :-----------------------------: | :------: | :--------------------: | :-----------------------------------------------: |
@@ -28,32 +63,8 @@
 |      /api/v1/allResources       |   GET    |      获取所有资源      |                         /                         |
 |    /api/v1/resourceByStatus     |   POST   |  通过资源状态获取资源  |                 "resourceStatus"                  |
 
+## 用途
 
+ShareSpot是一个面向无线资源持有者和普通用户的Wi-Fi等资源的共享平台。对于每一个用户，他们可以在ShareSpot平台发布他们闲置的无线网络资源（Wi-Fi、蓝牙、计算资源等）供用户购买。也可以以消费者的身份在ShareSpot平台向资源持有者申请购买他们期望的资源。
 
-## BlockNumber
-
-![image-20211012220400860](https://luochengyu.oss-cn-beijing.aliyuncs.com/img/image-20211012220400860.png)
-
-## NodePeers
-
-![image-20211012220432518](https://luochengyu.oss-cn-beijing.aliyuncs.com/img/image-20211012220432518.png)
-
-## SyncStatus
-
-![image-20211012220456977](https://luochengyu.oss-cn-beijing.aliyuncs.com/img/image-20211012220456977.png)
-
-json中的信息：
-
-![image-20211012154832010](https://luochengyu.oss-cn-beijing.aliyuncs.com/image-20211012154832010.png)
-
-## BlockByNumber
-
-![image-20211012162745111](https://luochengyu.oss-cn-beijing.aliyuncs.com/image-20211012162745111.png)
-
-返回样例
-
-![image-20211012221031017](https://luochengyu.oss-cn-beijing.aliyuncs.com/img/image-20211012221031017.png)
-
-## TotTxCount
-
-![image-20211012220537653](https://luochengyu.oss-cn-beijing.aliyuncs.com/img/image-20211012220537653.png)
+ShareSpot打破了不同资源所有者之间的障碍，为用户提供了一个安全的公共平台，可以从任何地方访问可用的无线网络资源。借助FISCO-BCOS，资源共享与交易可以非常安全、顺畅。此外，由于区块链的去中心化特性，项目代码可以直接分发到任何移动设备和商业硬件。
