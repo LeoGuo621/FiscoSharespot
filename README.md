@@ -35,7 +35,7 @@ ShareSpot项目Demo地址：http://exhard.cn/ss/ui-login.html
 
 ### 项目架构图
 
-![image-20211017151558581](https://luochengyu.oss-cn-beijing.aliyuncs.com/img/image-20211017151558581.png)
+![项目架构图](https://luochengyu.oss-cn-beijing.aliyuncs.com/img/%E6%9E%B6%E6%9E%84.png)
 
 ## 后端接口列表
 
